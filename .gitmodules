@@ -1,0 +1,3 @@
+[submodule "3rdParty/log"]
+	path = 3rdParty/boostlog
+	url = https://github.com/boostorg/log
