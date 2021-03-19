@@ -11,21 +11,21 @@
 
 class PluginManager : IPluginManager{
 public:
-    PluginManager(const std::string &appName);
+    explicit PluginManager(std::string appName);
 
-    virtual bool LoadPlugin() override;
-    virtual bool UnLoadPlugin() override;
+    bool LoadPlugin() override;
+    bool UnLoadPlugin() override;
 
-    virtual bool Init() override;
-    virtual bool Update() override;
-    virtual bool Shut() override;
+    bool Init() override;
+    bool Update() override;
+    bool Shut() override;
 
-    virtual void Registered(IPlugin * plugin) override;
-    virtual void UnRegistered(IPlugin * plugin) override;
+    void Registered(IPlugin * plugin) override;
+    void UnRegistered(IPlugin * plugin) override;
 
-    virtual void AddModule(const std::string &name, IModule *pModule) override;
-    virtual IModule* FindModule(const std::string &name) override;
-    virtual void RemoveModule(const std::string &name) override;
+    void AddModule(const std::string &name, IModule *pModule) override;
+    IModule* FindModule(const std::string &name) override;
+    void RemoveModule(const std::string &name) override;
 
 private:
 
