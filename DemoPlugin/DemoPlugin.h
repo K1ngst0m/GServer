@@ -11,8 +11,8 @@
 class DemoPlugin : public IPlugin{
 public:
     explicit DemoPlugin(IPluginManager * pluginManager);
-    virtual void Install() override;
-    virtual void Uninstall() override;
+    void Install() override;
+    void Uninstall() override;
 
 private:
     IPluginManager * m_pluginManager;

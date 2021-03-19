@@ -11,14 +11,14 @@
 
 class DemoModule : public IDemoModule{
 public:
-    DemoModule(IPluginManager *pluginManager);
+    explicit DemoModule(IPluginManager *pluginManager);
     ~DemoModule() = default;
 
-    virtual bool Init() override;
-    virtual bool Update() override;
-    virtual bool Shut() override;
+    bool Init() override;
+    bool Update() override;
+    bool Shut() override;
 
-    virtual void DemoTest() override;
+    void DemoTest() override;
 
     void OnMsgReceive(const uint64_t nClientID,
                       const uint32_t nMsgID,

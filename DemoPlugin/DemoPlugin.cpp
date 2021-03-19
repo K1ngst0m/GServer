@@ -7,9 +7,7 @@
 
 IPlugin *g_DemoPlugin;
 
-//TODO: linux dllexport
-
-//TODO: linux dllexport
+//TODO: linux lib export
 
 DemoPlugin::DemoPlugin(IPluginManager *pluginManager)
 : m_pluginManager(pluginManager) {}
