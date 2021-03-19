@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.17)
 set(CMAKE_CXX_STANDARD 17)
 
+# test
 add_subdirectory(SandBox)
+
+add_subdirectory(DemoPlugin)
 #add_subdirectory(3rdParty/boostlog)
 add_subdirectory(3rdParty/njson)
 
@@ -36,4 +39,5 @@ target_link_libraries(${PROJECT_NAME}
         nlohmann_json::nlohmann_json
         pthread
         dl
+        DemoPlugin
         )

@@ -18,17 +18,33 @@ PluginManager::PluginManager(std::string appName)
 {}
 
 bool PluginManager::LoadPlugin() {
-    // TODO: Json
-    //std::ifstream jsonStream("Plugin.json");
-    //json doc;
-    //jsonStream >> doc;
+    std::ifstream pluginFS;
+    pluginFS.exceptions(std::ifstream::failbit | std::ifstream::badbit);
+    try{
+        pluginFS.open("Plugins.json");
+    }
+    catch (std::system_error &e){
+        std::cout << "read config error: Plugins.json" << std::endl;
+        return false;
+    }
+    json pluginList;
+    pluginFS >> pluginList;
+
+#ifdef G_DEBUG
+    std::cout << "plugin data: " << pluginData << std::endl;
+#endif
+
+    const char * appName = nullptr;
+    if(m_strAppName.length() > 0){
+        appName = m_strAppName.c_str();
+    }
 
     // TODO: 子插件
-    while(true) {
-        std::string name = "demoplugin";
+    for(const auto & [key, _] : pluginList.items()){
+        std::string name = key;
         auto lib = new DynLib(name.c_str());
         if(lib->Load()){
-            DLL_START_PLUGIN_FUNC pFunc = (DLL_START_PLUGIN_FUNC)lib
+            auto pFunc = (DLL_START_PLUGIN_FUNC)lib
                 -> GetSymbol("DllStartPlugin");
 
             if(!pFunc){
@@ -42,11 +58,9 @@ bool PluginManager::LoadPlugin() {
             m_mapPluginLibs.insert(std::make_pair(name, lib));
         }
         else{
-            std::cout << "Load PluginFaliure" << name << std::endl;
+            std::cout << "Load PluginFailure" << name << std::endl;
             return false;
         }
-        //TODO
-        //child = child
     }
     return true;
 }

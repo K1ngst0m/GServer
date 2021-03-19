@@ -1,9 +1,12 @@
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
 project(DemoPlugin)
 
-add_library(
-        ${PROJECT_NAME}
+include_directories(../Include)
 
-        "PlugInMain.cpp"
+add_library(
+        ${PROJECT_NAME} SHARED
         "DemoModule.cpp"
         "DemoPlugin.cpp"
+
 )
