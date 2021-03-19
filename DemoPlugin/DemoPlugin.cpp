@@ -7,9 +7,15 @@
 
 IPlugin *g_DemoPlugin;
 
-//TODO: linux dllexport
+extern "C" void DllStartPlugin(IPluginManager* pm){
+    g_DemoPlugin = new DemoPlugin(pm);
+    pm->Registered(g_DemoPlugin);
+}
 
-//TODO: linux dllexport
+extern "C" void DllStopPlugin(IPluginManager* pm){
+    pm->UnRegistered(g_DemoPlugin);
+}
+
 
 DemoPlugin::DemoPlugin(IPluginManager *pluginManager)
 : m_pluginManager(pluginManager) {}

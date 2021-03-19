@@ -8,6 +8,10 @@
 struct MsgHead{
     unsigned short size;
     unsigned short type;
+    MsgHead(const unsigned short _size, const unsigned short _type){
+        size = _size;
+        type = _type;
+    }
 };
 
 enum MsgType {
@@ -19,18 +23,15 @@ const int MAX_NAME 32;
 const int MAX_MSG 255;
 
 struct Msg_Login_C2S : MsgHead{
-    Msg_Login_C2S(){
-        size = sizeof (*this);
-        type = LOGIN_C2S;
-    }
+    Msg_Login_C2S()
+    : MsgHead(sizeof (*this), LOGIN_C2S){}
+
     char szName[MAX_NAME];
 };
 
 struct Msg_Login_S2C : MsgHead{
-    Msg_Login_S2C(){
-        size = sizeof(*this);
-        type = LOGIN_S2C;
-    }
+    Msg_Login_S2C()
+    : MsgHead(sizeof(*this), LOGIN_S2C){}
 
     unsigned short id;
 };

@@ -7,6 +7,7 @@
 
 #include <string>
 #include <dlfcn.h>
+#include <memory>
 
 class DynLib{
 public:
@@ -21,7 +22,8 @@ public:
 protected:
 
     std::string m_strName;
-//    HMODULE mInst;
+    std::unique_ptr<void*> mInst;
+    void* handle_test;
 };
 
 #endif //GSERVER_DYNLIB_H

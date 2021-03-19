@@ -32,11 +32,11 @@ int main(int argc, char** args){
             break;
         }
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }
 
     // 插件清理
-    pluginManager->ShutDown();
+    pluginManager->Shut();
     pluginManager->UnLoadPlugin();
 }
 

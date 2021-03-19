@@ -5,8 +5,8 @@
 #ifndef GSERVER_TEST_H
 #define GSERVER_TEST_H
 
-void test1();
+extern "C" void test1();
 
-void test2(const char * content);
+extern "C" void test2(const char * content);
 
 #endif //GSERVER_TEST_H
