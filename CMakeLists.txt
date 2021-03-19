@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.17)
+cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_STANDARD 17)
 
 # test
@@ -7,6 +7,10 @@ add_subdirectory(SandBox)
 add_subdirectory(DemoPlugin)
 #add_subdirectory(3rdParty/boostlog)
 add_subdirectory(3rdParty/njson)
+
+# 资源复制
+#configure_file(${CMAKE_SOURCE_DIR}/Resources  COPYONLY)
+file(COPY Resources DESTINATION ${CMAKE_BINARY_DIR})
 
 
 # 头文件路径
