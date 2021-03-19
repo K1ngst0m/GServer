@@ -25,7 +25,7 @@ public:
     using NET_EVENT_FUNCTOR_PTR     = std::shared_ptr<NET_EVENT_FUNCTOR>;
 
     virtual int     Initialization(const unsigned short nPort, const char * ip = nullptr) = 0;
-    virtual bool    AddReceiveCallBack(const uint32_t nMsgID, const NET_EVENT_FUNCTOR_PTR &cb) = 0;
+    virtual bool    AddReceiveCallBack(const uint32_t nMsgID, const NET_RECEIVE_FUNCTOR_PTR &cb) = 0;
     virtual bool    AddEventCallBack(const NET_EVENT_FUNCTOR_PTR &enter_cb, const NET_EVENT_FUNCTOR_PTR &leave_cb) = 0;
     virtual void    SendMsg(const uint64_t nClientID, void* msg) = 0;
     virtual void    SendMsg(const uint64_t nClientID, int nMsgID, google::protobuf::Message &msg) = 0;
@@ -49,11 +49,11 @@ public:
                           void(BaseType::*handleEnter)(uint64_t),
                           void(BaseType::*handleLeave)(uint64_t)){
 
-        NET_RECEIVE_FUNCTOR functorEnter = std::bind(handleEnter, pBase, std::placeholders::_1);
-        NET_RECEIVE_FUNCTOR_PTR functorEnterPtr(new NET_RECEIVE_FUNCTOR(functorEnter));
+        NET_EVENT_FUNCTOR functorEnter = std::bind(handleEnter, pBase, std::placeholders::_1);
+        NET_EVENT_FUNCTOR_PTR functorEnterPtr(new NET_EVENT_FUNCTOR(functorEnter));
 
-        NET_RECEIVE_FUNCTOR functorLeave = std::bind(handleLeave, pBase, std::placeholders::_1);
-        NET_RECEIVE_FUNCTOR_PTR functorLeavePtr(new NET_RECEIVE_FUNCTOR(functorLeave));
+        NET_EVENT_FUNCTOR functorLeave = std::bind(handleLeave, pBase, std::placeholders::_1);
+        NET_EVENT_FUNCTOR_PTR functorLeavePtr(new NET_EVENT_FUNCTOR(functorLeave));
 
         return AddEventCallBack(functorEnterPtr, functorLeavePtr);
     }
