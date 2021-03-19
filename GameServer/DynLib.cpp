@@ -7,26 +7,25 @@
 
 DynLib::DynLib(const char *name) {
     m_strName = name;
-
     m_strName.append(".so");
 }
 
 bool DynLib::Load(){
     std::string strLibPath = "./";
     strLibPath += m_strName;
-    // TODO linux 加载动态库
-//    dlopen(strLibPath.c_str(), );
+    mInst = dlopen(strLibPath.c_str(), RTLD_LAZY);
+    return mInst != nullptr;
 }
 
 bool DynLib::Unload() {
-
-    return false;
+    dlclose(mInst);
+    return true;
 }
 
 const char *DynLib::GetName() {
-    return nullptr;
+    return m_strName.c_str();
 }
 
-void *DynLib::GetSymbol(const char *szProcName) {
-    return nullptr;
+void* DynLib::GetSymbol(const char *szProcName) {
+    return dlsym(mInst, szProcName);
 }

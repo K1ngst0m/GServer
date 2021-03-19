@@ -21,7 +21,7 @@ public:
 protected:
 
     std::string m_strName;
-//    HMODULE mInst;
+    void* mInst;
 };
 
 #endif //GSERVER_DYNLIB_H
