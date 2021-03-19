@@ -36,7 +36,7 @@ int main(int argc, char** args){
     }
 
     // 插件清理
-    pluginManager->ShutDown();
+    pluginManager->Shut();
     pluginManager->UnLoadPlugin();
 }
 
