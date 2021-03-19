@@ -2,11 +2,14 @@
 // Created by npchitman on 3/19/21.
 //
 #include "PluginManager.h"
+#include "DynLib.h"
 #include "IPlugin.h"
 #include <nlohmann/json.hpp>
 #include <cassert>
 #include <utility>
 #include <fstream>
+#include <iostream>
+#include <string>
 
 using json = nlohmann::json;
 
@@ -16,12 +19,36 @@ PluginManager::PluginManager(std::string appName)
 
 bool PluginManager::LoadPlugin() {
     // TODO: Json
+    //std::ifstream jsonStream("Plugin.json");
+    //json doc;
+    //jsonStream >> doc;
 
-    std::ifstream jsonStream("Plugin.json");
-    json doc;
-    jsonStream >> doc;
+    // TODO: 子插件
+    while(true) {
+        std::string name = "demoplugin";
+        auto lib = new DynLib(name.c_str());
+        if(lib->Load()){
+            DLL_START_PLUGIN_FUNC pFunc = (DLL_START_PLUGIN_FUNC)lib
+                -> GetSymbol("DllStartPlugin");
 
-    return false;
+            if(!pFunc){
+                std::cout << "Load DllStartPlugin Failure: " << name << std::endl;
+                return false;
+            }
+            else{
+                std::cout << "Load Plugin :" << name << std::endl;
+            }
+            pFunc(this);
+            m_mapPluginLibs.insert(std::make_pair(name, lib));
+        }
+        else{
+            std::cout << "Load PluginFaliure" << name << std::endl;
+            return false;
+        }
+        //TODO
+        //child = child
+    }
+    return true;
 }
 
 bool PluginManager::UnLoadPlugin() {

@@ -3,6 +3,7 @@
 //
 
 #include "DynLib.h"
+#include <memory>
 
 
 DynLib::DynLib(const char *name) {
@@ -13,12 +14,12 @@ DynLib::DynLib(const char *name) {
 bool DynLib::Load(){
     std::string strLibPath = "./";
     strLibPath += m_strName;
-    mInst = dlopen(strLibPath.c_str(), RTLD_LAZY);
+    mInst = std::make_unique<void*>(dlopen(strLibPath.c_str(), RTLD_LAZY));
     return mInst != nullptr;
 }
 
 bool DynLib::Unload() {
-    dlclose(mInst);
+    dlclose(mInst.get());
     return true;
 }
 
@@ -27,5 +28,5 @@ const char *DynLib::GetName() {
 }
 
 void* DynLib::GetSymbol(const char *szProcName) {
-    return dlsym(mInst, szProcName);
+    return dlsym(mInst.get(), szProcName);
 }
