@@ -1,6 +1,6 @@
 [submodule "3rdParty/log"]
 	path = 3rdParty/boostlog
-	url = https://github.com/boostorg/log
+	url = https://gitee.com/digital-media-1805/boost-log
 [submodule "3rdParty/njson"]
 	path = 3rdParty/njson
-	url = https://github.com/nlohmann/json
+	url = https://gitee.com/digital-media-1805/njson
