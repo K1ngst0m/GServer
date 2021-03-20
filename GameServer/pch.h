@@ -5,4 +5,16 @@
 #ifndef GAME_SERVER_PCH_H
 #define GAME_SERVER_PCH_H
 
+#include <iostream>
+#include <memory>
+#include <algorithm>
+#include <functional>
+
+#include <string>
+#include <sstream>
+#include <array>
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+
 #endif //GAME_SERVER_PCH_H
