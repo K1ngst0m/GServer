@@ -39,7 +39,6 @@ bool PluginManager::LoadPlugin() {
         appName = m_strAppName.c_str();
     }
 
-    // TODO: 子插件
     for(const auto & [key, _] : pluginList.items()){
         std::string name = key;
         auto lib = new DynLib(name.c_str());
