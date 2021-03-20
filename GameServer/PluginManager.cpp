@@ -21,7 +21,7 @@ bool PluginManager::LoadPlugin() {
     std::ifstream pluginFS;
     pluginFS.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try{
-        pluginFS.open("Plugins.json");
+        pluginFS.open("Resources/Configs/Plugins.json");
     }
     catch (std::system_error &e){
         std::cout << "read config error: Plugins.json" << std::endl;

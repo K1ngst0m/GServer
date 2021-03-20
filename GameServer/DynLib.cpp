@@ -22,13 +22,12 @@ bool DynLib::Load(){
         return false;
     }
     dlerror();
-    mInst = std::make_unique<void*>(handle);
-    handle_test = handle;
+    mInst = handle;
     return mInst != nullptr;
 }
 
 bool DynLib::Unload() {
-    dlclose(mInst.get());
+    dlclose(mInst);
     return true;
 }
 
@@ -37,11 +36,5 @@ const char *DynLib::GetName() {
 }
 
 void* DynLib::GetSymbol(const char *szProcName) {
-    return dlsym(handle_test, szProcName);
-//    auto symbol = dlsym(mInst.get(), szProcName);
-//    if (dlerror() != nullptr)  {
-//        std::cerr << "GetSymbol failure: " << dlerror() << std::endl;
-//        exit(EXIT_FAILURE);
-//    }
-//    return symbol;
+    return dlsym(mInst, szProcName);
 }
