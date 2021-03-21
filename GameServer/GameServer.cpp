@@ -3,12 +3,16 @@
 //
 
 #include "pch.h"
-#include <thread>
 #include "PluginManager.h"
+#include <Log/Log.h>
+#include <thread>
 #include <chrono>
 
 // 入口
 int main(int argc, char** args){
+    Log::Init(0);
+
+    CORE_INFO("Server start");
 
     // 系统运行参数为插件名
     const char *pluginName = "";
@@ -17,18 +21,24 @@ int main(int argc, char** args){
     }
 
     // 初始化插件
+    CORE_INFO("Plugin Load");
     auto * pluginManager = new PluginManager(pluginName);
     if(!pluginManager->LoadPlugin()){
         return -1;
     }
+
+    CORE_INFO("Plugin Init");
     if(!pluginManager->Init()){
+        CORE_ERROR("Plugin init failed.");
         return -1;
     }
 
+    CORE_INFO("Plugin Update");
     while(true){
-
+        CORE_TRACE("plugin updating");
         // 插件运行
         if(!pluginManager->Update()){
+            CORE_TRACE("{} {}", "test1", "test2");
             break;
         }
 
@@ -36,6 +46,7 @@ int main(int argc, char** args){
     }
 
     // 插件清理
+    CORE_INFO("Plugin Shut");
     pluginManager->Shut();
     pluginManager->UnLoadPlugin();
 }

@@ -27,6 +27,7 @@ public:
     IModule* FindModule(const std::string &name) override;
     void RemoveModule(const std::string &name) override;
 
+    void GetLogger();
 private:
 
     // 原例中typedef定义可读性不高, 改为using

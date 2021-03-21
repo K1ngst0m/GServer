@@ -10,6 +10,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <Log/Log.h>
 
 using json = nlohmann::json;
 
@@ -21,7 +22,7 @@ bool PluginManager::LoadPlugin() {
     std::ifstream pluginFS;
     pluginFS.exceptions(std::ifstream::failbit | std::ifstream::badbit);
     try{
-        pluginFS.open("Plugins.json");
+        pluginFS.open("Resources/Configs/Plugins.json");
     }
     catch (std::system_error &e){
         std::cout << "read config error: Plugins.json" << std::endl;
@@ -39,7 +40,6 @@ bool PluginManager::LoadPlugin() {
         appName = m_strAppName.c_str();
     }
 
-    // TODO: 子插件
     for(const auto & [key, _] : pluginList.items()){
         std::string name = key;
         auto lib = new DynLib(name.c_str());

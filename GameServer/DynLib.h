@@ -22,8 +22,7 @@ public:
 protected:
 
     std::string m_strName;
-    std::unique_ptr<void*> mInst;
-    void* handle_test;
+    void* mInst;
 };
 
 #endif //GSERVER_DYNLIB_H
