@@ -4,6 +4,7 @@
 
 #ifndef GSERVER_IMODULE_H
 #define GSERVER_IMODULE_H
+#include "../Common/Log/Log.h"
 
 class IModule{
 public:

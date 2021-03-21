@@ -10,40 +10,40 @@ DemoModule::DemoModule(IPluginManager *pluginManager)
 : m_pluginManager(pluginManager) {}
 
 bool DemoModule::Init() {
-    std::cout << "DemoModule Init" << std::endl;
+    PLUGIN_INFO("DemoModule Init");
 //    return false;
     return true;
 }
 
 bool DemoModule::Update() {
-    std::cout << "DemoModule Update" << std::endl;
+    PLUGIN_TRACE("DemoModule Update");
 //    return false;
     return true;
 }
 
 bool DemoModule::Shut() {
-    std::cout << "DemoModule Shut" << std::endl;
+    PLUGIN_INFO("DemoModule Shut");
 //    return false;
     return true;
 }
 
 void DemoModule::DemoTest() {
-    std::cout << "Demo Test" << std::endl;
+    PLUGIN_INFO("DemoModule Test");
 }
 
 void DemoModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, const char *msg, const uint32_t nLen) {
-    std::cout << "Demo OnMsgReceive, Client ID: " << nClientID
-    << ", nMsgID: " << nMsgID
-    << ", Msg: " << msg
-    << ", nLen" << nLen
-    << std::endl;
+    PLUGIN_INFO("[DemoModule] Client Received: , \
+            ClientID: {} , \
+            MsgID: {} , \
+            nLen: {} , ",
+            nClientID, nMsgID, msg, nLen);
 }
 
 void DemoModule::OnClientConnected(uint64_t nClientID) {
-    std::cout << "Client Connected: " << nClientID << std::endl;
+    PLUGIN_INFO("[DemoModule] Client Connect");
 }
 
 void DemoModule::OnClientLeave(uint64_t nClientID) {
-    std::cout << "Client DisConnected" << nClientID << std::endl;
+    PLUGIN_INFO("[DemoModule] Client Disconnect");
 }
 

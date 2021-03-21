@@ -10,6 +10,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <Log/Log.h>
 
 using json = nlohmann::json;
 

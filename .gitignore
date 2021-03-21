@@ -11,4 +11,5 @@ CTestTestfile.cmake
 /cmake-build-debug/
 /.idea/
 **/build/
-Sandbox/
+Sandbox*/
+.cache/
