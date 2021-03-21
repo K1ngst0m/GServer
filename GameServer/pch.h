@@ -16,5 +16,6 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <Log/Log.h>
 
 #endif //GAME_SERVER_PCH_H
