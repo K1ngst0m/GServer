@@ -1,4 +1,4 @@
-project(logger)
+project(Logger)
 
 include_directories("${CMAKE_SOURCE_DIR}/3rdParty/spdlog/include")
 
