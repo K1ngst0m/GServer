@@ -15,7 +15,7 @@ void Log::Init(int level){
     s_ClientLogger = spdlog::stderr_logger_mt("Client");
     s_PluginLogger = spdlog::stderr_logger_mt("Plugin");
 
-    spdlog::level::level_enum log_level;
+    spdlog::level::level_enum log_level = spdlog::level::off;
 
     switch(level){
         case 0:
@@ -32,6 +32,8 @@ void Log::Init(int level){
             break;
         case 4:
             log_level = spdlog::level::critical;
+            break;
+        default:
             break;
     }
 
