@@ -33,7 +33,7 @@ public:
     }
 
     template<class T>
-    T* FindModule(IModule* pModule){
+    T *FindModule() {
         return static_cast<T*>(FindModule(typeid(T).name()));
     }
 
