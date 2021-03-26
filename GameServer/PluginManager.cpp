@@ -25,14 +25,14 @@ bool PluginManager::LoadPlugin() {
         pluginFS.open("Resources/Configs/Plugins.json");
     }
     catch (std::system_error &e){
-        std::cout << "read config error: Plugins.json" << std::endl;
+        CORE_ERROR("read config error: Plugins.json");
         return false;
     }
     json pluginList;
     pluginFS >> pluginList;
 
 #ifdef G_DEBUG
-    std::cout << "plugin data: " << pluginData << std::endl;
+    CORE_INFO("plugin data: {}", pluginList);
 #endif
 
     const char * appName = nullptr;
@@ -48,17 +48,17 @@ bool PluginManager::LoadPlugin() {
                 -> GetSymbol("DllStartPlugin");
 
             if(!pFunc){
-                std::cout << "Load DllStartPlugin Failure: " << name << std::endl;
+                CORE_ERROR("Load DllStartPlugin Failed");
                 return false;
             }
             else{
-                std::cout << "Load Plugin :" << name << std::endl;
+                CORE_INFO("Load Plugin: {}", name);
             }
             pFunc(this);
             m_mapPluginLibs.insert(std::make_pair(name, lib));
         }
         else{
-            std::cout << "Load PluginFailure" << name << std::endl;
+            CORE_ERROR("Load Plugin Failed");
             return false;
         }
     }
