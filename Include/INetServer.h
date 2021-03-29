@@ -24,11 +24,11 @@ public:
     using NET_EVENT_FUNCTOR         = std::function<void(const uint64_t nClientID)>;
     using NET_EVENT_FUNCTOR_PTR     = std::shared_ptr<NET_EVENT_FUNCTOR>;
 
-    virtual int     Initialization(const unsigned short nPort, const char * ip = nullptr) = 0;
-    virtual bool    AddReceiveCallBack(const uint32_t nMsgID, const NET_RECEIVE_FUNCTOR_PTR &cb) = 0;
+    virtual int     Initialization(unsigned short nPort, const char * ip) = 0;
+    virtual bool    AddReceiveCallBack(uint32_t nMsgID, const NET_RECEIVE_FUNCTOR_PTR &cb) = 0;
     virtual bool    AddEventCallBack(const NET_EVENT_FUNCTOR_PTR &enter_cb, const NET_EVENT_FUNCTOR_PTR &leave_cb) = 0;
-    virtual void    SendMsg(const uint64_t nClientID, void* msg) = 0;
-    virtual void    SendMsg(const uint64_t nClientID, int nMsgID, google::protobuf::Message &msg) = 0;
+    virtual void    SendMsg(uint64_t nClientID, void* msg) = 0;
+    virtual void    SendMsg(uint64_t nClientID, int nMsgID, google::protobuf::Message &msg) = 0;
 
     template<typename BaseType>
     bool AddReceiveCallBack(uint32_t nMsgID, BaseType* pBase,

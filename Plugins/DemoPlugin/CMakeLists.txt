@@ -15,3 +15,7 @@ add_library(plug::demo ALIAS ${PROJECT_NAME})
 
 # 链接所需动态库 (在根目录的cmake文件定义)
 target_link_libraries(${PROJECT_NAME} ${plug_lklibs})
+
+# 预编译头
+target_precompile_headers(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/pch.h")
+

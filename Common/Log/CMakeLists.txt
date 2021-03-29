@@ -1,10 +1,7 @@
 project(Logger)
 
-include_directories("${CMAKE_SOURCE_DIR}/3rdParty/spdlog/include")
+include_directories("spdlog")
 
 file(GLOB src_files "${PROJECT_SOURCE_DIR}/*.cpp")
 
-add_library(
-    ${PROJECT_NAME} SHARED
-    ${src_files}
-)
+add_library(${PROJECT_NAME} SHARED ${src_files})

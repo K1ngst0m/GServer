@@ -20,7 +20,7 @@ public:
     int ExecuteBinary(const char *cmd, SQLParam *param) override;
 
 protected:
-    int OpenImpl(std::map<std::string, std::string> &strmap) override;
+    int OpenImpl(std::map<std::string, std::string> &strMap) override;
 
 private:
     sqlite3 *_db;

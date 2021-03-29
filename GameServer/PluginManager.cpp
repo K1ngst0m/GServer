@@ -1,16 +1,9 @@
 //
 // Created by npchitman on 3/19/21.
 //
+#include "pch.h"
 #include "PluginManager.h"
-#include "DynLib.h"
 #include "IPlugin.h"
-#include <nlohmann/json.hpp>
-#include <cassert>
-#include <utility>
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <Log/Log.h>
 
 using json = nlohmann::json;
 
@@ -35,10 +28,10 @@ bool PluginManager::LoadPlugin() {
     CORE_INFO("plugin data: {}", pluginList);
 #endif
 
-    const char * appName = nullptr;
-    if(m_strAppName.length() > 0){
-        appName = m_strAppName.c_str();
-    }
+//    const char * appName = nullptr;
+//    if(m_strAppName.length() > 0){
+//        appName = m_strAppName.c_str();
+//    }
 
     for(const auto & [key, _] : pluginList.items()){
         std::string name = key;

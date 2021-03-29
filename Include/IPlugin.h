@@ -6,7 +6,6 @@
 #define GSERVER_IPLUGIN_H
 
 #include "IModule.h"
-#include "../Common/Log/Log.h"
 #include <unordered_map>
 
 class IPlugin{

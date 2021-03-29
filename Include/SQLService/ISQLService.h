@@ -9,7 +9,7 @@
 #include "IQueryResult.h"
 #include <functional>
 
-typedef std::function<void(IQueryResult *result, int nRetCode)> SQL_Callback;
+using SQL_Callback = std::function<void(IQueryResult *result, int nRetCode)>;
 
 struct SQLParam
 {
@@ -34,10 +34,10 @@ public:
     virtual int ExecuteBinary(const char *cmd, SQLParam *param) = 0;
     virtual int ExecuteBinaryf(const char *cmd, SQLParam *param, ...) = 0;
 
-    virtual void ExecuteQueryAsync(const char *cmd, SQL_Callback callback = 0, bool bHasResult = true) = 0;
-    virtual void ExecuteQueryAsyncf(const char *cmd, SQL_Callback callback = 0, bool bHasResult = true, ...) = 0;
-    virtual void ExecuteBinaryAsync(const char *cmd, SQLParam *param, SQL_Callback callback = 0) = 0;
-    virtual void ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callback callback = 0, ...) = 0;
+    virtual void ExecuteQueryAsync(const char *cmd, SQL_Callback callback, bool bHasResult) = 0;
+    virtual void ExecuteQueryAsyncf(const char *cmd, SQL_Callback callback, bool bHasResult, ...) = 0;
+    virtual void ExecuteBinaryAsync(const char *cmd, SQLParam *param, SQL_Callback callback) = 0;
+    virtual void ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callback callback, ...) = 0;
 };
 
 #endif //GSERVER_ISQLSERVICE_H

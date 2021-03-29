@@ -2,9 +2,8 @@
 // Created by npchitman on 3/18/21.
 //
 
+#include "pch.h"
 #include "DynLib.h"
-#include <memory>
-#include <iostream>
 
 
 DynLib::DynLib(const char *name) {
@@ -14,7 +13,7 @@ DynLib::DynLib(const char *name) {
 }
 
 bool DynLib::Load(){
-    std::string strLibPath = "./";
+    std::string strLibPath = "./libs/";
     strLibPath += m_strName;
     auto handle = dlopen(strLibPath.c_str(), RTLD_LAZY);
     if(!handle){

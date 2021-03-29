@@ -3,12 +3,6 @@
 #include <SQLService/ISQLService.h>
 #include <IPluginManager.h>
 
-#include <map>
-#include <list>
-#include <functional>
-#include <mutex>
-#include <utility>
-
 
 class SQL_Request
 {
@@ -26,10 +20,10 @@ public:
 	bool _bHasResult ;
 };
 
-class SQL_Respon
+class SQL_Response
 {
 public:
-	SQL_Respon(SQL_Callback callback, IQueryResult *result, bool retCode)
+	SQL_Response(SQL_Callback callback, IQueryResult *result, bool retCode)
 	{
 		_result = result;
 		_callback = std::move(callback);
@@ -61,23 +55,23 @@ public:
     int ExecuteBinary(const char *cmd, SQLParam *param) override = 0;
     int ExecuteBinaryf(const char *cmd, SQLParam *param, ...) override;
 		
-    void ExecuteQueryAsync(const char *cmd, SQL_Callback callback = nullptr, bool bHasResult = true) override;
-    void ExecuteQueryAsyncf(const char *cmd, SQL_Callback callback = nullptr, bool bHasResult = true, ...) override;
-    void ExecuteBinaryAsync(const char *cmd, SQLParam *param, SQL_Callback callback = nullptr) override;
-    void ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callback callback = nullptr, ...) override;
+    void ExecuteQueryAsync(const char *cmd, SQL_Callback callback, bool bHasResult) override;
+    void ExecuteQueryAsyncf(const char *cmd, SQL_Callback callback, bool bHasResult, ...) override;
+    void ExecuteBinaryAsync(const char *cmd, SQLParam *param, SQL_Callback callback) override;
+    void ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callback callback, ...) override;
 
     [[noreturn]] void Run();
 
 protected:
 	SQLService() = default;
-    virtual int OpenImpl(std::map<std::string, std::string> &strmap) = 0;
-    char _param[1024];
+    virtual int OpenImpl(std::map<std::string, std::string> &strMap) = 0;
+    char _param[1024]{};
 
 private:
 	std::mutex m_RequestLock;
 	std::list<SQL_Request*> m_listRequest;
 
-	std::mutex m_ResponLock;
-	std::list<SQL_Respon*> m_listRespon;
+	std::mutex mResponseLock;
+	std::list<SQL_Response*> m_listResponse;
 	IPluginManager *m_pPluginManager;
 };

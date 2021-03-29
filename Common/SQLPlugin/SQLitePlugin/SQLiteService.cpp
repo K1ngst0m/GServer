@@ -1,11 +1,12 @@
 /********************************************************************
-	purpose:	���ݿ����ӿ�ʵ����
+	purpose:	???????????????
 *********************************************************************/
+#include "../Common/pch.h"
 #include "SQLiteService.h"
 #include "SQLiteQueryResult.h"
 
 //-----------------------------------------------------
-// ����
+// ????
 //-----------------------------------------------------
 SQLiteService::SQLiteService(IPluginManager *pluginManager)
 	: SQLService(pluginManager)
@@ -14,7 +15,7 @@ SQLiteService::SQLiteService(IPluginManager *pluginManager)
 }
 
 //-----------------------------------------------------
-// ����
+// ????
 //-----------------------------------------------------
 SQLiteService::~SQLiteService()
 {
@@ -22,17 +23,17 @@ SQLiteService::~SQLiteService()
        sqlite3_close(_db);
 }
 
-int SQLiteService::OpenImpl(std::map<std::string, std::string> &strmap)
+int SQLiteService::OpenImpl(std::map<std::string, std::string> &strMap)
 {
-	return sqlite3_open(strmap["filename"].c_str(), &_db);
+	return sqlite3_open(strMap["filename"].c_str(), &_db);
 }
 
 int SQLiteService::ExecuteQuery(IQueryResult **result, const char *cmd)
 {
-    *result = 0;
+    *result = nullptr;
 		
 	sqlite3_stmt *stmt;
-	int ret =sqlite3_prepare(_db, cmd, strlen(cmd), &stmt, 0);
+	int ret =sqlite3_prepare(_db, cmd, strlen(cmd), &stmt, nullptr);
 
 	if(ret != SQLITE_OK)
 		return ret;
@@ -61,7 +62,7 @@ int SQLiteService::ExecuteBinary(const char *cmd, SQLParam *param)
 
     do
     {
-		ret = sqlite3_prepare(_db, cmd, -1, &stmt, 0);
+		ret = sqlite3_prepare(_db, cmd, -1, &stmt, nullptr);
         if(ret != SQLITE_OK)
         {
             break;
@@ -69,7 +70,7 @@ int SQLiteService::ExecuteBinary(const char *cmd, SQLParam *param)
 
         uint32_t count= sqlite3_bind_parameter_count(stmt);
 
-        for(uint32_t i = 0; i < count; i++)
+        for(auto i = 0; i < count; i++)
         {
 			ret = sqlite3_bind_blob(stmt, i+1, param[i].data, param[i].length, SQLITE_STATIC);
 			if (ret != SQLITE_OK)

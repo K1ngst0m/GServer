@@ -20,18 +20,18 @@ public:
 
     void DemoTest() override;
 
-    void OnMsgReceive(const uint64_t nClientID,
-                      const uint32_t nMsgID,
+    void OnMsgReceive(uint64_t nClientID,
+                      uint32_t nMsgID,
                       const char* msg,
-                      const uint32_t nLen);
+                      uint32_t nLen);
 
     void OnClientConnected(uint64_t nClientID);
     void OnClientLeave(uint64_t nClientID);
 
 private:
     IPluginManager *m_pluginManager;
-    uint64_t m_sayTime;
-    INetServer * m_pNetServer;
+    uint64_t m_sayTime{};
+    INetServer * m_pNetServer{};
 
 };
 

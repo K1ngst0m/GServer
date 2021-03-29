@@ -1,4 +1,4 @@
-#include <cstring>
+#include "../Common/pch.h"
 #include "SQLiteQueryResult.h"
 
 SQLiteQueryResult::SQLiteQueryResult(sqlite3_stmt *stmt, uint64_t row_count, uint32_t field_count)

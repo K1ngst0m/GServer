@@ -1,4 +1,6 @@
-#pragma once
+#ifndef QUERY_RESULT_H
+#define QUERY_RESULT_H
+
 #include <SQLService/IQueryResult.h>
 
 class QueryResult : public IQueryResult
@@ -25,3 +27,5 @@ protected:
     uint64_t _row_count;
     uint32_t _filed_count;
 };
+
+#endif

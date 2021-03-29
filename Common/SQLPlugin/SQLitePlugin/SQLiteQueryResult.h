@@ -1,6 +1,6 @@
 #pragma once
 #include "../Common/QueryResult.h"
-#include "./sqlite/sqlite3.h"
+#include "sqlite/sqlite3.h"
 
 class SQLiteQueryResult :
     public QueryResult

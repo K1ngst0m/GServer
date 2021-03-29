@@ -3,11 +3,11 @@
 //
 
 #include <IPluginManager.h>
-#include "DynLib.h"
-
 #include <set>
 #include <unordered_map>
 #include <iostream>
+
+#include "DynLib.h"
 
 class PluginManager : IPluginManager{
 public:
@@ -26,8 +26,6 @@ public:
     void AddModule(const std::string &name, IModule *pModule) override;
     IModule* FindModule(const std::string &name) override;
     void RemoveModule(const std::string &name) override;
-
-    void GetLogger();
 private:
 
     // 原例中typedef定义可读性不高, 改为using

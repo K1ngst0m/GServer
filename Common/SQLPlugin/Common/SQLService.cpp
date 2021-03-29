@@ -1,5 +1,5 @@
+#include "pch.h"
 #include "SQLService.h"
-#include <cstdarg>
 
 SQLService::SQLService(IPluginManager *pluginManager)
 	: m_pPluginManager(pluginManager) {}
@@ -13,24 +13,24 @@ bool SQLService::Init()
 
 bool SQLService::Update()
 {
-	int nResponCount;
+	int nResponseCount;
 	do
 	{
-		SQL_Respon *pRespon;
+		SQL_Response *pResponse;
 		{
-			std::lock_guard<std::mutex> lck(m_ResponLock);
-			nResponCount = m_listRespon.size();
-			if (nResponCount == 0)
+			std::lock_guard<std::mutex> lck(mResponseLock);
+			nResponseCount = m_listResponse.size();
+			if (nResponseCount == 0)
 				break;
-			pRespon = m_listRespon.front();
-			m_listRespon.pop_front();
+			pResponse = m_listResponse.front();
+			m_listResponse.pop_front();
 		}
-		if (pRespon->_callback)
+		if (pResponse->_callback)
 		{
-			pRespon->_callback(pRespon->_result, pRespon->errorCode);
+			pResponse->_callback(pResponse->_result, pResponse->errorCode);
 		}
-		nResponCount--;
-	} while (nResponCount);
+		nResponseCount--;
+	} while (nResponseCount);
 	return true;
 }
 
@@ -108,7 +108,7 @@ void SQLService::ExecuteQueryAsync(const char *cmd, SQL_Callback callback, bool 
 {
 	std::lock_guard<std::mutex> lck(m_RequestLock);
 
-	auto *pRequest = new SQL_Request(cmd, callback, NULL, bHasResult);
+	auto *pRequest = new SQL_Request(cmd, callback, nullptr, bHasResult);
 	m_listRequest.push_back(pRequest);
 }
 
@@ -137,6 +137,7 @@ void SQLService::ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callb
     va_list arg_ptr;
 
     va_start(arg_ptr, cmd);
+
     vsprintf(_param, cmd, arg_ptr);
 
     va_end(arg_ptr);
@@ -155,26 +156,26 @@ void SQLService::ExecuteBinaryAsyncf(const char *cmd, SQLParam *param, SQL_Callb
 			m_listRequest.pop_front();			
 			m_RequestLock.unlock();
 
-			SQL_Respon *pRespon;
+			SQL_Response *pResponse;
 			if(pRequest->_param)
 			{
 				int nRet = ExecuteBinary(pRequest->strCmd.c_str(), pRequest->_param);
-				pRespon = new SQL_Respon(pRequest->_callback, nullptr, nRet);
+                pResponse = new SQL_Response(pRequest->_callback, nullptr, nRet);
 			}
 			else if(pRequest->_bHasResult)
 			{
 				IQueryResult *pResult;
 				int nRet = ExecuteQuery(&pResult, pRequest->strCmd.c_str());
-				pRespon = new SQL_Respon(pRequest->_callback, pResult, nRet);
+                pResponse = new SQL_Response(pRequest->_callback, pResult, nRet);
 			}
 			else
 			{
 				int nRet = ExecuteQuery(pRequest->strCmd.c_str());
-				pRespon = new SQL_Respon(pRequest->_callback, nullptr, nRet);
+                pResponse = new SQL_Response(pRequest->_callback, nullptr, nRet);
 			}
-			m_ResponLock.lock();
-			m_listRespon.push_back(pRespon);
-			m_ResponLock.unlock();
+			mResponseLock.lock();
+			m_listResponse.push_back(pResponse);
+			mResponseLock.unlock();
 		}
 		else
 		{

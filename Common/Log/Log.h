@@ -2,21 +2,23 @@
 #define LOG_H
 
 #include <memory>
-#include <spdlog/spdlog.h>
-#include <spdlog/fmt/ostr.h>
+#include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 class Log{
     public:
-        static void Init(int level = 1);
+        using LOGGER_PTR = std::shared_ptr<spdlog::logger>;
 
-        inline static std::shared_ptr<spdlog::logger> &GetCoreLogger() { return s_CoreLogger; }
-        inline static std::shared_ptr<spdlog::logger> &GetClientLogger() { return s_ClientLogger; }
-        inline static std::shared_ptr<spdlog::logger> &GetPluginLogger() { return s_PluginLogger; }
+        static void Init();
+
+        inline static LOGGER_PTR &GetCoreLogger() { return s_CoreLogger; }
+        inline static LOGGER_PTR &GetModuleLogger() { return s_ModuleLogger; }
+        inline static LOGGER_PTR &GetPluginLogger() { return s_PluginLogger; }
 
     private:
-        static std::shared_ptr<spdlog::logger> s_CoreLogger;
-        static std::shared_ptr<spdlog::logger> s_PluginLogger;
-        static std::shared_ptr<spdlog::logger> s_ClientLogger;
+        static LOGGER_PTR s_CoreLogger;
+        static LOGGER_PTR s_PluginLogger;
+        static LOGGER_PTR s_ModuleLogger;
 };
 
 
@@ -26,11 +28,11 @@ class Log{
 #define CORE_ERROR(...)             ::Log::GetCoreLogger()->error(__VA_ARGS__)
 #define CORE_FATAL(...)             ::Log::GetCoreLogger()->fatal(__VA_ARGS__)
 
-#define CLIENT_TRACE(...)           ::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define CLIENT_INFO(...)            ::Log::GetClientLogger()->info(__VA_ARGS__)
-#define CLIENT_WARN(...)            ::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define CLIENT_ERROR(...)           ::Log::GetClientLogger()->error(__VA_ARGS__)
-#define CLIENT_FATAL(...)           ::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define MODULE_TRACE(...)           ::Log::GetModuleLogger()->trace(__VA_ARGS__)
+#define MODULE_INFO(...)            ::Log::GetModuleLogger()->info(__VA_ARGS__)
+#define MODULE_WARN(...)            ::Log::GetModuleLogger()->warn(__VA_ARGS__)
+#define MODULE_ERROR(...)           ::Log::GetModuleLogger()->error(__VA_ARGS__)
+#define MODULE_FATAL(...)           ::Log::GetModuleLogger()->fatal(__VA_ARGS__)
 
 #define PLUGIN_TRACE(...)           ::Log::GetPluginLogger()->trace(__VA_ARGS__)
 #define PLUGIN_INFO(...)            ::Log::GetPluginLogger()->info(__VA_ARGS__)

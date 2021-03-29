@@ -16,6 +16,12 @@
 #include <vector>
 #include <unordered_map>
 #include <unordered_set>
+#include <thread>
+#include <chrono>
+#include <nlohmann/json.hpp>
+#include <cassert>
+#include <utility>
+#include <fstream>
 #include <Log/Log.h>
 
 #endif //GAME_SERVER_PCH_H

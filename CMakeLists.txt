@@ -1,17 +1,17 @@
 cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/libs)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+
+add_definitions(-DLOG_LEVEL=0)
 
 project(GServer)
 
-# 插件包含目录
-set(plug_incl
-    "${CMAKE_SOURCE_DIR}/Include/"
-    "${CMAKE_SOURCE_DIR}/Common/"
-    "${CMAKE_SOURCE_DIR}/3rdParty/spdlog/include"
-    )
+include_directories(${CMAKE_SOURCE_DIR}/Include)
+
+# 二级插件包含目录
+set(plug_incl "${CMAKE_SOURCE_DIR}/Common/")
 
 # 插件通用链接库
 set(plug_lklibs
@@ -33,7 +33,7 @@ add_subdirectory(GameServer)            # 服务器核心
 
 #add_subdirectory(${plug_dirs})         # 插件
 add_subdirectory(Plugins/DemoPlugin)
-add_subdirectory(Plugins/UserPlugin)
+#add_subdirectory(Plugins/UserPlugin)
 
 #add_subdirectory(${common_dirs})
 add_subdirectory(Common/Log)            # 日志
