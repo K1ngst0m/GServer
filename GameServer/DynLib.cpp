@@ -13,7 +13,7 @@ DynLib::DynLib(const char *name) {
 }
 
 bool DynLib::Load(){
-    std::string strLibPath = "./libs/";
+    std::string strLibPath = "./Libs/";
     strLibPath += m_strName;
     auto handle = dlopen(strLibPath.c_str(), RTLD_LAZY);
     if(!handle){

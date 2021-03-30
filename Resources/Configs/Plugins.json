@@ -1,4 +1,14 @@
 {
+  "NetPlugin": {
+    "name": "net",
+    "version": "1.0.0",
+    "description": "net plugin"
+  },
+  "SQLPlugin": {
+    "name": "sql",
+    "version": "1.0.0",
+    "description": "sql plugin"
+  },
   "DemoPlugin": {
     "name": "demo",
     "version": "1.0.0",
