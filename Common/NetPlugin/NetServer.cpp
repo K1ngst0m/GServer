@@ -28,7 +28,6 @@ bool NetServer::Update()
 		int nsize = sizeof(sockaddr);
 		sockaddr    clientAddr{};
 
-		// ????????????????
 		client = accept(m_serverSocket, &clientAddr, reinterpret_cast<socklen_t *>(&nsize));//????????????
 		if (client != -1)
 		{
@@ -36,10 +35,8 @@ bool NetServer::Update()
 		}
 
 		std::list<uint64_t> m_removeClient;
-		//???????????
 		for (auto kv : m_mapClient)
 		{
-			// ?????
 			char szBuf[255];
 			int nLen = recv(kv.first, szBuf, 1024, 0);
 			bool bError = false;
@@ -56,7 +53,6 @@ bool NetServer::Update()
 //				}
 			}
 
-			// ?????????
 			if (!bError)
 			{
 				if (kv.second->m_sendData.length() > 0)
@@ -82,7 +78,6 @@ bool NetServer::Update()
 			}
 			else
 			{
-				// ???????????? 
 				if (kv.second->m_recvData.length() >= 4)
 				{
 					const char *pData = kv.second->m_recvData.data();
@@ -92,16 +87,14 @@ bool NetServer::Update()
 
 					while ((kv.second->m_recvData.length()-nIndex) >= nSize)
 					{
-						// ??????????
 						auto itr = m_onReceiveCB.find(nType);
 						if (itr != m_onReceiveCB.end())
 						{
-							for (const auto& onRecive : itr->second)
+							for (const auto& onReceive : itr->second)
 							{
-								(*onRecive)(kv.second->m_guid, nType, kv.second->m_recvData.data()+nIndex, nSize);
+								(*onReceive)(kv.second->m_guid, nType, kv.second->m_recvData.data() + nIndex, nSize);
 							}
 						}
-						// ????????????
 						nIndex += nSize;
 					}
 					if (nIndex != 0)
@@ -140,14 +133,14 @@ int NetServer::Initialization(const unsigned short nPort, const char *ip /*= nul
 	{
 		ip = "127.0.0.1";
 	}
-	sockaddr_in sockaddr{};
-	sockaddr.sin_family = PF_INET;
-	sockaddr.sin_addr.s_addr = inet_addr(ip);
-	sockaddr.sin_port = htons(nPort);
+	sockaddr_in sockAddr{};
+    sockAddr.sin_family = PF_INET;
+    sockAddr.sin_addr.s_addr = inet_addr(ip);
+    sockAddr.sin_port = htons(nPort);
 
-	bind(m_serverSocket, (const struct sockaddr *)&sockaddr, sizeof(sockaddr));
+	bind(m_serverSocket, (const struct sockaddr *)&sockAddr, sizeof(sockAddr));
 
-	listen(m_serverSocket, 1);//???????
+	listen(m_serverSocket, 1);
 
 	int mode = 1;
 	ioctl(m_serverSocket, FIONBIO, (u_long *)&mode);

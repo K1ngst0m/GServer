@@ -9,9 +9,9 @@
     "version": "1.0.0",
     "description": "sql plugin"
   },
-  "DemoPlugin": {
-    "name": "demo",
+  "UserPlugin": {
+    "name": "user",
     "version": "1.0.0",
-    "description": "demo plugin"
+    "description": "user plugin"
   }
 }

@@ -4,7 +4,7 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Libs)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-add_definitions(-DLOG_LEVEL=0)
+add_definitions(-DLOG_LEVEL=1)
 
 project(GServer)
 
@@ -28,7 +28,7 @@ add_subdirectory(GameServer)            # 服务器核心
 
 #add_subdirectory(${plug_dirs})         # 插件
 add_subdirectory(Plugins/DemoPlugin)
-#add_subdirectory(Plugins/UserPlugin)
+add_subdirectory(Plugins/UserPlugin)
 
 #add_subdirectory(${common_dirs})
 add_subdirectory(Common/Log)            # 日志

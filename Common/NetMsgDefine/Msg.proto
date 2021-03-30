@@ -40,6 +40,7 @@ message Msg_Login_C2S
 message Msg_Login_S2C
 {
   required int32 result = 1;
+  required int32 id = 2;
 }
 message Msg_CreateRoom_C2S
 {

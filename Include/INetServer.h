@@ -32,7 +32,7 @@ public:
 
     template<typename BaseType>
     bool AddReceiveCallBack(uint32_t nMsgID, BaseType* pBase,
-                            void(BaseType::*handleReceive)(const uint64_t, const uint32_t nMsgID, const char * msg, const int32_t nLen)){
+                            void(BaseType::*handleReceive)(const uint64_t, const uint32_t nMsgID, const char * msg, const uint32_t nLen)){
         NET_RECEIVE_FUNCTOR functor = std::bind(handleReceive, pBase,
                                                 std::placeholders::_1,
                                                 std::placeholders::_2,

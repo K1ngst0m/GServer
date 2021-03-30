@@ -24,12 +24,10 @@ public:
 	explicit NetServer(IPluginManager *pluginManager);
 	~NetServer();
 
-	// ͨ�� IModule �̳�
 	bool Init() override;
 	bool Update() override;
 	bool Shut() override;
 
-	// ͨ�� INetServer �̳�
 	int Initialization(unsigned short nPort, const char *ip) override;
 	bool AddReceiveCallBack(uint32_t nMsgID, const NET_RECEIVE_FUNCTOR_PTR & cb) override;
 	bool AddEventCallBack(const NET_EVENT_FUNCTOR_PTR &enter_cb, const NET_EVENT_FUNCTOR_PTR &leave_cb) override;

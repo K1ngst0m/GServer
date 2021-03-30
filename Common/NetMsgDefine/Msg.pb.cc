@@ -56,7 +56,8 @@ struct Msg_Login_C2SDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Msg_Login_C2SDefaultTypeInternal _Msg_Login_C2S_default_instance_;
 constexpr Msg_Login_S2C::Msg_Login_S2C(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : result_(0){}
+  : result_(0)
+  , id_(0){}
 struct Msg_Login_S2CDefaultTypeInternal {
   constexpr Msg_Login_S2CDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -288,7 +289,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Msg_2eproto::offsets[] PROTOBU
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::Msg_Login_S2C, result_),
+  PROTOBUF_FIELD_OFFSET(::Msg_Login_S2C, id_),
   0,
+  1,
   PROTOBUF_FIELD_OFFSET(::Msg_CreateRoom_C2S, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::Msg_CreateRoom_C2S, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -428,21 +431,21 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 0, 7, sizeof(::Msg_Register_C2S)},
   { 9, 15, sizeof(::Msg_Register_S2C)},
   { 16, 23, sizeof(::Msg_Login_C2S)},
-  { 25, 31, sizeof(::Msg_Login_S2C)},
-  { 32, 38, sizeof(::Msg_CreateRoom_C2S)},
-  { 39, 45, sizeof(::Msg_CreateRoom_S2C)},
-  { 46, 52, sizeof(::Msg_EnterRoom_C2S)},
-  { 53, 61, sizeof(::Msg_EnterRoom_S2C)},
-  { 64, 74, sizeof(::Msg_ChangeState_C2S)},
-  { 79, 89, sizeof(::Msg_ChangeState_S2C)},
-  { 94, 101, sizeof(::Msg_Expel_C2S)},
-  { 103, 110, sizeof(::Msg_Expel_S2C)},
-  { 112, 118, sizeof(::Msg_StartGame_C2S)},
-  { 119, 125, sizeof(::Msg_StartGame_S2C)},
-  { 126, 133, sizeof(::Msg_ExitRoom_C2S)},
-  { 135, 142, sizeof(::Msg_ExitRoom_S2C)},
-  { 144, 152, sizeof(::Msg_FANGJIANLT_C2S)},
-  { 155, 163, sizeof(::Msg_FANGJIANLT_S2C)},
+  { 25, 32, sizeof(::Msg_Login_S2C)},
+  { 34, 40, sizeof(::Msg_CreateRoom_C2S)},
+  { 41, 47, sizeof(::Msg_CreateRoom_S2C)},
+  { 48, 54, sizeof(::Msg_EnterRoom_C2S)},
+  { 55, 63, sizeof(::Msg_EnterRoom_S2C)},
+  { 66, 76, sizeof(::Msg_ChangeState_C2S)},
+  { 81, 91, sizeof(::Msg_ChangeState_S2C)},
+  { 96, 103, sizeof(::Msg_Expel_C2S)},
+  { 105, 112, sizeof(::Msg_Expel_S2C)},
+  { 114, 120, sizeof(::Msg_StartGame_C2S)},
+  { 121, 127, sizeof(::Msg_StartGame_S2C)},
+  { 128, 135, sizeof(::Msg_ExitRoom_C2S)},
+  { 137, 144, sizeof(::Msg_ExitRoom_S2C)},
+  { 146, 154, sizeof(::Msg_FANGJIANLT_C2S)},
+  { 157, 165, sizeof(::Msg_FANGJIANLT_S2C)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -470,41 +473,41 @@ const char descriptor_table_protodef_Msg_2eproto[] PROTOBUF_SECTION_VARIABLE(pro
   "\n\tMsg.proto\"6\n\020Msg_Register_C2S\022\016\n\006szNam"
   "e\030\001 \002(\014\022\022\n\nszPassword\030\002 \002(\014\"\"\n\020Msg_Regis"
   "ter_S2C\022\016\n\006result\030\001 \002(\005\"3\n\rMsg_Login_C2S"
-  "\022\016\n\006szName\030\001 \002(\014\022\022\n\nszPassword\030\002 \002(\014\"\037\n\r"
-  "Msg_Login_S2C\022\016\n\006result\030\001 \002(\005\" \n\022Msg_Cre"
-  "ateRoom_C2S\022\n\n\002id\030\001 \002(\005\"$\n\022Msg_CreateRoo"
-  "m_S2C\022\016\n\006result\030\001 \002(\005\"\037\n\021Msg_EnterRoom_C"
-  "2S\022\n\n\002id\030\001 \002(\005\"C\n\021Msg_EnterRoom_S2C\022\016\n\006r"
-  "esult\030\001 \002(\005\022\016\n\006number\030\002 \001(\005\022\016\n\006szName\030\003 "
-  "\001(\014\"d\n\023Msg_ChangeState_C2S\022\016\n\006result\030\001 \002"
-  "(\005\022\017\n\007number1\030\002 \001(\005\022\017\n\007number2\030\003 \001(\005\022\014\n\004"
-  "type\030\004 \001(\005\022\r\n\005ready\030\005 \001(\005\"d\n\023Msg_ChangeS"
-  "tate_S2C\022\016\n\006result\030\001 \002(\005\022\017\n\007number1\030\002 \001("
-  "\005\022\017\n\007number2\030\003 \001(\005\022\014\n\004type\030\004 \001(\005\022\r\n\005read"
-  "y\030\005 \001(\005\"+\n\rMsg_Expel_C2S\022\016\n\006number\030\001 \002(\005"
-  "\022\n\n\002id\030\002 \002(\005\"/\n\rMsg_Expel_S2C\022\016\n\006result\030"
-  "\001 \002(\005\022\016\n\006number\030\002 \001(\005\"\037\n\021Msg_StartGame_C"
-  "2S\022\n\n\002id\030\001 \002(\005\"#\n\021Msg_StartGame_S2C\022\016\n\006r"
-  "esult\030\001 \002(\005\".\n\020Msg_ExitRoom_C2S\022\n\n\002id\030\001 "
-  "\002(\005\022\016\n\006number\030\002 \002(\005\"2\n\020Msg_ExitRoom_S2C\022"
-  "\016\n\006result\030\001 \002(\005\022\016\n\006number\030\002 \001(\005\"H\n\022Msg_F"
-  "ANGJIANLT_C2S\022\021\n\tszContent\030\001 \002(\014\022\016\n\006szNa"
-  "me\030\002 \002(\014\022\017\n\007houseid\030\003 \002(\005\"G\n\022Msg_FANGJIA"
-  "NLT_S2C\022\016\n\006result\030\001 \002(\005\022\021\n\tszContent\030\002 \001"
-  "(\014\022\016\n\006szName\030\003 \001(\014*\357\002\n\007MsgType\022\021\n\014REGIST"
-  "ER_C2S\020\362\007\022\021\n\014REGISTER_S2C\020\332\017\022\016\n\tLOGIN_C2"
-  "S\020\374\007\022\016\n\tLOGIN_S2C\020\344\017\022\024\n\017CREATE_ROOM_C2S\020"
-  "\206\010\022\024\n\017CREATE_ROOM_S2C\020\356\017\022\023\n\016ENTER_ROOM_C"
-  "2S\020\220\010\022\023\n\016ENTER_ROOM_S2C\020\370\017\022\025\n\020CHANGE_STA"
-  "TE_C2S\020\232\010\022\025\n\020CHANGE_STATE_S2C\020\202\020\022\016\n\tEXPE"
-  "L_C2S\020\244\010\022\016\n\tEXPEL_S2C\020\214\020\022\023\n\016START_GAME_C"
-  "2S\020\256\010\022\023\n\016START_GAME_S2C\020\226\020\022\022\n\rEXIT_ROOM_"
-  "C2S\020\270\010\022\022\n\rEXIT_ROOM_S2C\020\240\020\022\023\n\016FANGJIANLT"
-  "_C2S\020\326\010\022\023\n\016FANGJIANLT_S2C\020\276\020"
+  "\022\016\n\006szName\030\001 \002(\014\022\022\n\nszPassword\030\002 \002(\014\"+\n\r"
+  "Msg_Login_S2C\022\016\n\006result\030\001 \002(\005\022\n\n\002id\030\002 \002("
+  "\005\" \n\022Msg_CreateRoom_C2S\022\n\n\002id\030\001 \002(\005\"$\n\022M"
+  "sg_CreateRoom_S2C\022\016\n\006result\030\001 \002(\005\"\037\n\021Msg"
+  "_EnterRoom_C2S\022\n\n\002id\030\001 \002(\005\"C\n\021Msg_EnterR"
+  "oom_S2C\022\016\n\006result\030\001 \002(\005\022\016\n\006number\030\002 \001(\005\022"
+  "\016\n\006szName\030\003 \001(\014\"d\n\023Msg_ChangeState_C2S\022\016"
+  "\n\006result\030\001 \002(\005\022\017\n\007number1\030\002 \001(\005\022\017\n\007numbe"
+  "r2\030\003 \001(\005\022\014\n\004type\030\004 \001(\005\022\r\n\005ready\030\005 \001(\005\"d\n"
+  "\023Msg_ChangeState_S2C\022\016\n\006result\030\001 \002(\005\022\017\n\007"
+  "number1\030\002 \001(\005\022\017\n\007number2\030\003 \001(\005\022\014\n\004type\030\004"
+  " \001(\005\022\r\n\005ready\030\005 \001(\005\"+\n\rMsg_Expel_C2S\022\016\n\006"
+  "number\030\001 \002(\005\022\n\n\002id\030\002 \002(\005\"/\n\rMsg_Expel_S2"
+  "C\022\016\n\006result\030\001 \002(\005\022\016\n\006number\030\002 \001(\005\"\037\n\021Msg"
+  "_StartGame_C2S\022\n\n\002id\030\001 \002(\005\"#\n\021Msg_StartG"
+  "ame_S2C\022\016\n\006result\030\001 \002(\005\".\n\020Msg_ExitRoom_"
+  "C2S\022\n\n\002id\030\001 \002(\005\022\016\n\006number\030\002 \002(\005\"2\n\020Msg_E"
+  "xitRoom_S2C\022\016\n\006result\030\001 \002(\005\022\016\n\006number\030\002 "
+  "\001(\005\"H\n\022Msg_FANGJIANLT_C2S\022\021\n\tszContent\030\001"
+  " \002(\014\022\016\n\006szName\030\002 \002(\014\022\017\n\007houseid\030\003 \002(\005\"G\n"
+  "\022Msg_FANGJIANLT_S2C\022\016\n\006result\030\001 \002(\005\022\021\n\ts"
+  "zContent\030\002 \001(\014\022\016\n\006szName\030\003 \001(\014*\357\002\n\007MsgTy"
+  "pe\022\021\n\014REGISTER_C2S\020\362\007\022\021\n\014REGISTER_S2C\020\332\017"
+  "\022\016\n\tLOGIN_C2S\020\374\007\022\016\n\tLOGIN_S2C\020\344\017\022\024\n\017CREA"
+  "TE_ROOM_C2S\020\206\010\022\024\n\017CREATE_ROOM_S2C\020\356\017\022\023\n\016"
+  "ENTER_ROOM_C2S\020\220\010\022\023\n\016ENTER_ROOM_S2C\020\370\017\022\025"
+  "\n\020CHANGE_STATE_C2S\020\232\010\022\025\n\020CHANGE_STATE_S2"
+  "C\020\202\020\022\016\n\tEXPEL_C2S\020\244\010\022\016\n\tEXPEL_S2C\020\214\020\022\023\n\016"
+  "START_GAME_C2S\020\256\010\022\023\n\016START_GAME_S2C\020\226\020\022\022"
+  "\n\rEXIT_ROOM_C2S\020\270\010\022\022\n\rEXIT_ROOM_S2C\020\240\020\022\023"
+  "\n\016FANGJIANLT_C2S\020\326\010\022\023\n\016FANGJIANLT_S2C\020\276\020"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Msg_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Msg_2eproto = {
-  false, false, 1348, descriptor_table_protodef_Msg_2eproto, "Msg.proto", 
+  false, false, 1360, descriptor_table_protodef_Msg_2eproto, "Msg.proto", 
   &descriptor_table_Msg_2eproto_once, nullptr, 0, 18,
   schemas, file_default_instances, TableStruct_Msg_2eproto::offsets,
   file_level_metadata_Msg_2eproto, file_level_enum_descriptors_Msg_2eproto, file_level_service_descriptors_Msg_2eproto,
@@ -1309,8 +1312,11 @@ class Msg_Login_S2C::_Internal {
   static void set_has_result(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
+  static void set_has_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
   static bool MissingRequiredFields(const HasBits& has_bits) {
-    return ((has_bits[0] & 0x00000001) ^ 0x00000001) != 0;
+    return ((has_bits[0] & 0x00000003) ^ 0x00000003) != 0;
   }
 };
 
@@ -1324,12 +1330,17 @@ Msg_Login_S2C::Msg_Login_S2C(const Msg_Login_S2C& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  result_ = from.result_;
+  ::memcpy(&result_, &from.result_,
+    static_cast<size_t>(reinterpret_cast<char*>(&id_) -
+    reinterpret_cast<char*>(&result_)) + sizeof(id_));
   // @@protoc_insertion_point(copy_constructor:Msg_Login_S2C)
 }
 
 void Msg_Login_S2C::SharedCtor() {
-result_ = 0;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&result_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&id_) -
+    reinterpret_cast<char*>(&result_)) + sizeof(id_));
 }
 
 Msg_Login_S2C::~Msg_Login_S2C() {
@@ -1358,7 +1369,12 @@ void Msg_Login_S2C::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  result_ = 0;
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    ::memset(&result_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&id_) -
+        reinterpret_cast<char*>(&result_)) + sizeof(id_));
+  }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1376,6 +1392,14 @@ const char* Msg_Login_S2C::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
           _Internal::set_has_result(&has_bits);
           result_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // required int32 id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          _Internal::set_has_id(&has_bits);
+          id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1415,6 +1439,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_result(), target);
   }
 
+  // required int32 id = 2;
+  if (cached_has_bits & 0x00000002u) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_id(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1423,15 +1453,43 @@ failure:
   return target;
 }
 
+size_t Msg_Login_S2C::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Msg_Login_S2C)
+  size_t total_size = 0;
+
+  if (_internal_has_result()) {
+    // required int32 result = 1;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_result());
+  }
+
+  if (_internal_has_id()) {
+    // required int32 id = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_id());
+  }
+
+  return total_size;
+}
 size_t Msg_Login_S2C::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Msg_Login_S2C)
   size_t total_size = 0;
 
-  // required int32 result = 1;
-  if (_internal_has_result()) {
+  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required int32 result = 1;
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
         this->_internal_result());
+
+    // required int32 id = 2;
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->_internal_id());
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
   }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
@@ -1468,8 +1526,15 @@ void Msg_Login_S2C::MergeFrom(const Msg_Login_S2C& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from._internal_has_result()) {
-    _internal_set_result(from._internal_result());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      result_ = from.result_;
+    }
+    if (cached_has_bits & 0x00000002u) {
+      id_ = from.id_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
 }
 
@@ -1496,7 +1561,12 @@ void Msg_Login_S2C::InternalSwap(Msg_Login_S2C* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
-  swap(result_, other->result_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(Msg_Login_S2C, id_)
+      + sizeof(Msg_Login_S2C::id_)
+      - PROTOBUF_FIELD_OFFSET(Msg_Login_S2C, result_)>(
+          reinterpret_cast<char*>(&result_),
+          reinterpret_cast<char*>(&other->result_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Msg_Login_S2C::GetMetadata() const {

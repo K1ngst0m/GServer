@@ -803,6 +803,7 @@ class Msg_Login_S2C PROTOBUF_FINAL :
 
   enum : int {
     kResultFieldNumber = 1,
+    kIdFieldNumber = 2,
   };
   // required int32 result = 1;
   bool has_result() const;
@@ -817,9 +818,25 @@ class Msg_Login_S2C PROTOBUF_FINAL :
   void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
+  // required int32 id = 2;
+  bool has_id() const;
+  private:
+  bool _internal_has_id() const;
+  public:
+  void clear_id();
+  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
+  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
+  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:Msg_Login_S2C)
  private:
   class _Internal;
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
@@ -827,6 +844,7 @@ class Msg_Login_S2C PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::int32 result_;
+  ::PROTOBUF_NAMESPACE_ID::int32 id_;
   friend struct ::TableStruct_Msg_2eproto;
 };
 // -------------------------------------------------------------------
@@ -3598,6 +3616,34 @@ inline void Msg_Login_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 v
 inline void Msg_Login_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_result(value);
   // @@protoc_insertion_point(field_set:Msg_Login_S2C.result)
+}
+
+// required int32 id = 2;
+inline bool Msg_Login_S2C::_internal_has_id() const {
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  return value;
+}
+inline bool Msg_Login_S2C::has_id() const {
+  return _internal_has_id();
+}
+inline void Msg_Login_S2C::clear_id() {
+  id_ = 0;
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::_internal_id() const {
+  return id_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::id() const {
+  // @@protoc_insertion_point(field_get:Msg_Login_S2C.id)
+  return _internal_id();
+}
+inline void Msg_Login_S2C::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _has_bits_[0] |= 0x00000002u;
+  id_ = value;
+}
+inline void Msg_Login_S2C::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+  _internal_set_id(value);
+  // @@protoc_insertion_point(field_set:Msg_Login_S2C.id)
 }
 
 // -------------------------------------------------------------------
