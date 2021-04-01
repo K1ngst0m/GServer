@@ -8,6 +8,7 @@
 #include <IDemoModule.h>
 #include <IPluginManager.h>
 #include <INetServer.h>
+#include <SQLService/ISQLService.h>
 
 class DemoModule : public IDemoModule{
 public:
@@ -32,7 +33,7 @@ private:
     IPluginManager *m_pluginManager;
     uint64_t m_sayTime{};
     INetServer * m_pNetServer{};
-
+    ISQLService * m_pSQLService;
 };
 
 

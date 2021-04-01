@@ -13,12 +13,12 @@ LoginModule::LoginModule(IPluginManager *pluginManager) {
 LoginModule::~LoginModule() = default;
 
 bool LoginModule::Init() {
-    PLUGIN_INFO("LoginModule: Init");
+    MODULE_INFO("LoginModule: Init");
     m_pNetServer = m_pluginManager->FindModule<INetServer>();
     m_pSQLService = m_pluginManager->FindModule<ISQLService>();
 
 
-    PLUGIN_INFO("LoginModule: Open DataBase");
+    MODULE_INFO("LoginModule: Open DataBase");
     m_pSQLService->Open("filename=sqlite3.db");
 
     m_nMaxUserID = 0;
@@ -29,7 +29,7 @@ bool LoginModule::Init() {
         m_nMaxUserID = result->get_int32(0);
     }
 
-    PLUGIN_INFO("LoginModule: Init Server");
+    MODULE_INFO("LoginModule: Init Server");
 
     m_pNetServer->Initialization(3000, "0.0.0.0");
     m_pNetServer->AddEventCallBack(this, &LoginModule::OnClientConnected, &LoginModule::OnClientLeave);
@@ -39,12 +39,12 @@ bool LoginModule::Init() {
 }
 
 bool LoginModule::Update() {
-    PLUGIN_TRACE("LoginModule: Update");
+    MODULE_TRACE("LoginModule: Update");
     return true;
 }
 
 bool LoginModule::Shut() {
-    PLUGIN_INFO("LoginModule: Shut");
+    MODULE_INFO("LoginModule: Shut");
     return true;
 }
 

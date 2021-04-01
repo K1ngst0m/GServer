@@ -1,0 +1,6 @@
+sqlite3
+google-protobuf
+nlohmann_json
+spdlog
+asio
+boost-program-options

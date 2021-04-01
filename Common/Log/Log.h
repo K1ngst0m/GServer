@@ -9,7 +9,7 @@ class Log{
     public:
         using LOGGER_PTR = std::shared_ptr<spdlog::logger>;
 
-        static void Init();
+        static void Init(const char *level = "0");
 
         inline static LOGGER_PTR &GetCoreLogger() { return s_CoreLogger; }
         inline static LOGGER_PTR &GetModuleLogger() { return s_ModuleLogger; }
