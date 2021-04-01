@@ -45,9 +45,7 @@ public:
     }
 
     template<typename BaseType>
-    bool AddEventCallBack(BaseType * pBase,
-                          void(BaseType::*handleEnter)(uint64_t),
-                          void(BaseType::*handleLeave)(uint64_t)){
+    bool AddEventCallBack(BaseType * pBase, void(BaseType::*handleEnter)(uint64_t), void(BaseType::*handleLeave)(uint64_t)){
 
         NET_EVENT_FUNCTOR functorEnter = std::bind(handleEnter, pBase, std::placeholders::_1);
         NET_EVENT_FUNCTOR_PTR functorEnterPtr(new NET_EVENT_FUNCTOR(functorEnter));

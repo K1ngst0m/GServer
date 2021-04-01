@@ -14,6 +14,7 @@
 #include <unistd.h>
 #include <cstdlib>
 #include <cerrno>
+#include <array>
 
 
 #include "../Log/Log.h"

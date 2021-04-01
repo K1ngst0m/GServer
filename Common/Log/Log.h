@@ -21,7 +21,6 @@ class Log{
         static LOGGER_PTR s_ModuleLogger;
 };
 
-
 #define CORE_TRACE(...)             ::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define CORE_INFO(...)              ::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define CORE_WARN(...)              ::Log::GetCoreLogger()->warn(__VA_ARGS__)

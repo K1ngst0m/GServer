@@ -7,8 +7,6 @@
 
 #endif //GSERVER_LOGINMODULE_H
 
-//TODO SQL Service
-
 #include <ILoginModule.h>
 #include <IPluginManager.h>
 #include <INetServer.h>
@@ -31,8 +29,8 @@ public:
 
 private:
     IPluginManager *m_pluginManager;
-    INetServer *m_pNetServer;
-    ISQLService *m_pSQLService;
-    int m_nMaxUserID;
+    INetServer *m_pNetServer{};
+    ISQLService *m_pSQLService{};
+    int m_nMaxUserID{};
 };
 

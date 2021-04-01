@@ -22,7 +22,7 @@ public:
 protected:
 
     std::string m_strName;
-    void* mInst{};
+    void* mInst;
 };
 
 #endif //GSERVER_DYNLIB_H
