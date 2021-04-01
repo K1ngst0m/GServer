@@ -2,6 +2,10 @@
 #include <INetServer.h>
 #include <IPluginManager.h>
 #include <unordered_map>
+#include <asio.hpp>
+#include <asio/basic_socket.hpp>
+
+using asio::ip::tcp;
 
 class User
 {
@@ -17,8 +21,7 @@ public:
 	}
 };
 
-class NetServer :
-	public INetServer
+class NetServer : public INetServer
 {
 public:
 	explicit NetServer(IPluginManager *pluginManager);
@@ -33,26 +36,31 @@ public:
 	bool AddEventCallBack(const NET_EVENT_FUNCTOR_PTR &enter_cb, const NET_EVENT_FUNCTOR_PTR &leave_cb) override;
 	void SendMsg(uint64_t nClientID, void* msg) override;
 	void SendMsg(uint64_t nClientID, int nMsgID, google::protobuf::Message &msg) override;
-
 private:
-	User* GetFreeUser();
+
+    void AddClient(tcp::socket *socket);
+
+    User* GetFreeUser();
 	void FreeUser(User* pUser);
 
-	void AddClient(int socket);
-	void RemoveClient(int socket);
+	void RemoveClient(tcp::socket *socket);
 
 private:
 	IPluginManager *m_pluginManager;
-	int m_serverSocket{};
 
 	uint32_t m_nClientGUID{};
 
-	std::unordered_map<uint64_t, User*> m_mapClient;
 	std::unordered_map<uint64_t, User*> m_mapUser;
 	std::list<User*> m_listFreeUser;
 
 	std::unordered_map<uint32_t, std::list<NET_RECEIVE_FUNCTOR_PTR>> m_onReceiveCB;
 	std::list<NET_EVENT_FUNCTOR_PTR> m_onEnterCB;
 	std::list<NET_EVENT_FUNCTOR_PTR> m_onLeaveCB;
+
+
+    std::shared_ptr<asio::io_context> m_serverContext;
+    std::shared_ptr<tcp::socket> m_serverSocket;
+    std::shared_ptr<tcp::acceptor> m_serverAcceptor;
+    std::unordered_map<std::shared_ptr<tcp::socket>, User*> m_mapClient;
 };
 

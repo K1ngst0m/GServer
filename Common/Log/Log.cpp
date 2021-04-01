@@ -8,9 +8,9 @@ Log::LOGGER_PTR Log::s_ModuleLogger;
 void Log::Init(){
     spdlog::set_pattern("%^[%T] %n: %v%$");
 
-    s_CoreLogger = spdlog::stderr_logger_mt("Core");
-    s_ModuleLogger = spdlog::stderr_logger_mt("Module");
-    s_PluginLogger = spdlog::stderr_logger_mt("Plugin");
+    s_CoreLogger    = spdlog::stderr_logger_mt("Core");
+    s_ModuleLogger  = spdlog::stderr_logger_mt("Module");
+    s_PluginLogger  = spdlog::stderr_logger_mt("Plugin");
 
     spdlog::level::level_enum log_level = spdlog::level::off;
 

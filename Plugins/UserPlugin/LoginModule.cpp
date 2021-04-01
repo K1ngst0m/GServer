@@ -30,8 +30,8 @@ bool LoginModule::Init() {
     }
 
     PLUGIN_INFO("LoginModule: Init Server");
-    m_pNetServer->Initialization(3000, "0.0.0.0");
 
+    m_pNetServer->Initialization(3000, "0.0.0.0");
     m_pNetServer->AddEventCallBack(this, &LoginModule::OnClientConnected, &LoginModule::OnClientLeave);
     m_pNetServer->AddReceiveCallBack((uint32_t)MsgType::LOGIN_C2S, this, &LoginModule::OnMsgReceive);
 

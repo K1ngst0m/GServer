@@ -27,11 +27,11 @@ int main(int argc, char** argv){
         return -1;
     }
 
-    CORE_INFO("Plugin Update");
+    // 插件运行
+    CORE_INFO("Plugin Run");
     while(true){
-        CORE_TRACE("plugin updating");
+        CORE_TRACE("plugin update");
 
-        // 插件运行
         if(!pluginManager->Update()){
             break;
         }
