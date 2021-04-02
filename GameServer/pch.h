@@ -18,10 +18,10 @@
 #include <unordered_set>
 #include <thread>
 #include <chrono>
-#include <nlohmann/json.hpp>
 #include <cassert>
 #include <utility>
 #include <fstream>
 #include <Log/Log.h>
+#include "json.hpp"
 
 #endif //GAME_SERVER_PCH_H

@@ -9,7 +9,8 @@
 #include <functional>
 #include <string>
 
-#define BIND_CMD(argc, argv, fn) [begin = argv, end = argc + argv](auto && option, auto && action) { return fn(begin, end, std::forward<decltype(option)>(option), std::forward<decltype(action)>(action)); };
+#define BIND_CMD(argc, argv, fn) [begin = argv, end = argc + argv](auto && option, auto && action) \
+        { return fn(begin, end, std::forward<decltype(option)>(option), std::forward<decltype(action)>(action)); };
 
 namespace CmdOption{
 

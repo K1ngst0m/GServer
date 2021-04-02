@@ -2,14 +2,14 @@
 #define LOG_H
 
 #include <memory>
-#include "spdlog/spdlog.h"
-#include "spdlog/fmt/ostr.h"
+#include <spdlog/spdlog.h>
+#include <spdlog/fmt/ostr.h>
 
 class Log{
     public:
         using LOGGER_PTR = std::shared_ptr<spdlog::logger>;
 
-        static void Init(const char *level = "0");
+        static void Init(std::string lv = "0");
 
         inline static LOGGER_PTR &GetCoreLogger() { return s_CoreLogger; }
         inline static LOGGER_PTR &GetModuleLogger() { return s_ModuleLogger; }
