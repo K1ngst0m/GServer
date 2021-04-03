@@ -12,11 +12,11 @@ DynLib::DynLib(const char *name) {
     m_strName.append(".so");
 }
 
-bool DynLib::Load(){
+bool DynLib::Load() {
     std::string strLibPath = "./Libs/";
     strLibPath += m_strName;
     auto handle = dlopen(strLibPath.c_str(), RTLD_LAZY);
-    if(!handle){
+    if (!handle) {
         std::cerr << "load plugin failed: " << dlerror() << std::endl;
         return false;
     }
@@ -34,6 +34,6 @@ const char *DynLib::GetName() {
     return m_strName.c_str();
 }
 
-void* DynLib::GetSymbol(const char *szProcName) {
+void *DynLib::GetSymbol(const char *szProcName) {
     return dlsym(mInst, szProcName);
 }

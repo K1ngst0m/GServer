@@ -19,7 +19,7 @@ bool LoginModule::Init() {
 
 
     MODULE_INFO("LoginModule: Open DataBase");
-    m_pSQLService->Open("filename=sqlite3.db");
+    m_pSQLService->Open("filename=Resources/Data/data.sqlite");
 
     m_nMaxUserID = 0;
     IQueryResult *result;
@@ -31,7 +31,7 @@ bool LoginModule::Init() {
 
     MODULE_INFO("LoginModule: Init Server");
 
-    m_pNetServer->Initialization(3000, "0.0.0.0");
+    m_pNetServer->Initialization(3001, "47.110.143.150");
     m_pNetServer->AddEventCallBack(this, &LoginModule::OnClientConnected, &LoginModule::OnClientLeave);
     m_pNetServer->AddReceiveCallBack((uint32_t)MsgType::LOGIN_C2S, this, &LoginModule::OnMsgReceive);
 
@@ -52,35 +52,27 @@ void LoginModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, 
     Msg_Login_C2S xMsg;
     xMsg.ParseFromArray(msg + 4, nLen);
 
-    switch (nMsgID) {
-        case MsgType::LOGIN_C2S:
-        {
-            auto *pMsg = (Msg_Login_C2S*)msg;
+    if (nMsgID == MsgType::LOGIN_C2S) {
+        auto *pMsg = (Msg_Login_C2S*)msg;
 
-            int userId = m_nMaxUserID;
-            IQueryResult *result;
-            m_pSQLService->ExecuteQueryf(&result,
-                                         "SELECT userId FROM User WHERE userName='%s'",
-                                         pMsg->szname().c_str());
-            if(result && result->Read()){
-                userId = result->get_int32(0);
-            }
-            else{
-                userId = ++m_nMaxUserID;
-                m_pSQLService->ExecuteQueryf(&result,
-                                             "INSERT INTO User(userID, userName) VALUES(%d, '%s);",
-                                             userId, pMsg->szname().c_str());
-            }
-            MODULE_INFO("UserLogin: {} : {}", pMsg->szname().c_str(), userId);
-            Msg_Login_S2C login;
-            login.set_id(userId);
-            m_pNetServer->SendMsg(nClientID, &login);
+        int userId = m_nMaxUserID;
+        IQueryResult *result;
+        m_pSQLService->ExecuteQueryf(&result,
+                                     "SELECT userId FROM User WHERE userName='%s'",
+                                     pMsg->szname().c_str());
+        if(result && result->Read()){
+            userId = result->get_int32(0);
         }
-        break;
-//        case MsgType::CHAT_C2S:{
-//
-//        }
-//        break;
+        else{
+            userId = ++m_nMaxUserID;
+            m_pSQLService->ExecuteQueryf(&result,
+                                         "INSERT INTO User(userID, userName) VALUES(%d, '%s);",
+                                         userId, pMsg->szname().c_str());
+        }
+        MODULE_INFO("UserLogin: {} : {}", pMsg->szname().c_str(), userId);
+        Msg_Login_S2C login;
+        login.set_id(userId);
+        m_pNetServer->SendMsg(nClientID, &login);
     }
 }
 

@@ -12,7 +12,7 @@ include_directories(${CMAKE_SOURCE_DIR}/Include)
 set(plug_incl "${CMAKE_SOURCE_DIR}/Common/")
 
 # 插件通用链接库
-set(plug_lklibs pthread dl Logger nlohmann_json::nlohmann_json)
+set(plug_lklibs pthread dl Logger)
 
 # 所有插件目录
 file(GLOB plug_dirs ${CMAKE_SOURCE_DIR}/Plugins/*)
@@ -33,9 +33,6 @@ add_subdirectory(Common/Log)            # 日志
 add_subdirectory(Common/NetPlugin)            # 网络
 add_subdirectory(Common/NetMsgDefine)   # 网络包定义
 add_subdirectory(Common/SQLPlugin)   # 数据库
-
-# 添加第三方库子目录
-add_subdirectory(3rdParty/njson)    # json库
 
 # 将Resources复制到运行目录
 file(COPY Resources DESTINATION ${CMAKE_BINARY_DIR})

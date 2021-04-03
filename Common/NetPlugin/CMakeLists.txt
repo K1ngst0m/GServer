@@ -1,7 +1,7 @@
 # 插件名
 project(NetPlugin)
 
-include_directories(Include)
+include_directories(${PROJECT_SOURCE_DIR}/Include)
 
 # 插件源文件目录
 file(GLOB src_files "${PROJECT_SOURCE_DIR}/*.cpp")

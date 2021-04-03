@@ -8,16 +8,15 @@
 using json = nlohmann::json;
 
 PluginManager::PluginManager(std::string appName)
-: m_strAppName(std::move(appName))
-{}
+        : m_strAppName(std::move(appName)) {}
 
 bool PluginManager::LoadPlugin() {
     std::ifstream pluginFS;
     pluginFS.exceptions(std::ifstream::failbit | std::ifstream::badbit);
-    try{
+    try {
         pluginFS.open("Resources/Configs/Plugins.json");
     }
-    catch (std::system_error &e){
+    catch (std::system_error &e) {
         CORE_ERROR("read config error: Plugins.json");
         return false;
     }
@@ -33,24 +32,22 @@ bool PluginManager::LoadPlugin() {
 //        appName = m_strAppName.c_str();
 //    }
 
-    for(const auto & [key, _] : pluginList.items()){
+    for (const auto &[key, _] : pluginList.items()) {
         std::string name = key;
         auto lib = new DynLib(name.c_str());
-        if(lib->Load()){
-            auto pFunc = (DLL_START_PLUGIN_FUNC)lib
-                -> GetSymbol("DllStartPlugin");
+        if (lib->Load()) {
+            auto pFunc = (DLL_START_PLUGIN_FUNC) lib
+                    ->GetSymbol("DllStartPlugin");
 
-            if(!pFunc){
+            if (!pFunc) {
                 CORE_ERROR("Load DllStartPlugin Failed");
                 return false;
-            }
-            else{
+            } else {
                 CORE_INFO("Load Plugin: {}", name);
             }
             pFunc(this);
             m_mapPluginLibs.insert(std::make_pair(name, lib));
-        }
-        else{
+        } else {
             CORE_ERROR("Load Plugin Failed");
             return false;
         }
@@ -60,10 +57,10 @@ bool PluginManager::LoadPlugin() {
 
 bool PluginManager::UnLoadPlugin() {
 
-    for(const auto& itr : m_mapPluginLibs){
+    for (const auto &itr : m_mapPluginLibs) {
         auto pLib = itr.second;
-        auto pFunc = (DLL_START_PLUGIN_FUNC)pLib->GetSymbol("DllStopPlugin");
-        if(pFunc){
+        auto pFunc = (DLL_START_PLUGIN_FUNC) pLib->GetSymbol("DllStopPlugin");
+        if (pFunc) {
             pFunc(this);
         }
         pLib->Unload();
@@ -74,24 +71,24 @@ bool PluginManager::UnLoadPlugin() {
 }
 
 bool PluginManager::Init() {
-    for(auto itr : m_mapModules){
-        if(!itr.second->Init())
+    for (auto itr : m_mapModules) {
+        if (!itr.second->Init())
             return false;
     }
     return true;
 }
 
 bool PluginManager::Update() {
-    for(auto itr : m_mapModules){
-        if(!itr.second->Update())
+    for (auto itr : m_mapModules) {
+        if (!itr.second->Update())
             return false;
     }
     return true;
 }
 
 bool PluginManager::Shut() {
-    for(auto itr : m_mapModules){
-        if(!itr.second->Shut())
+    for (auto itr : m_mapModules) {
+        if (!itr.second->Shut())
             return false;
     }
     return true;
@@ -108,24 +105,24 @@ void PluginManager::UnRegistered(IPlugin *plugin) {
 }
 
 void PluginManager::AddModule(const std::string &name, IModule *pModule) {
-    if(!FindModule(name)){
+    if (!FindModule(name)) {
         m_mapModules.insert(std::make_pair(name, pModule));
     }
 }
 
 IModule *PluginManager::FindModule(const std::string &name) {
-    if(auto itr = m_mapModules.find(name);
-        itr != m_mapModules.end()
-    ){
+    if (auto itr = m_mapModules.find(name);
+            itr != m_mapModules.end()
+            ) {
         return itr->second;
     }
     return nullptr;
 }
 
 void PluginManager::RemoveModule(const std::string &name) {
-    if(auto itr = m_mapModules.find(name);
+    if (auto itr = m_mapModules.find(name);
             itr != m_mapModules.end()
-            ){
+            ) {
         m_mapModules.erase(itr);
     }
 }

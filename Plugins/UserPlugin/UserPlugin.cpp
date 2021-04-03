@@ -25,10 +25,10 @@ UserPlugin::UserPlugin(IPluginManager *pluginManager) {
 
 void UserPlugin::Install() {
     m_pPluginManager->AddModule<LoginModule>(new LoginModule(m_pPluginManager));
-    m_pPluginManager->AddModule<RegisterModule>(new RegisterModule(m_pPluginManager));
+//    m_pPluginManager->AddModule<RegisterModule>(new RegisterModule(m_pPluginManager));
 }
 
 void UserPlugin::Uninstall() {
     m_pPluginManager->RemoveModule<LoginModule>();
-    m_pPluginManager->RemoveModule<RegisterModule>();
+//    m_pPluginManager->RemoveModule<RegisterModule>();
 }
