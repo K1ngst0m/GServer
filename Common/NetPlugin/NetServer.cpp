@@ -17,6 +17,7 @@ bool NetServer::Update() {
     MODULE_TRACE("NetService Update");
     if (m_serverAcceptor->is_open()) {
         auto bError = false;
+
         // 连接客户端
         auto client = std::make_shared<tcp::socket>(tcp::socket(*m_serverContext));
         MODULE_INFO("Wait for connection...");
@@ -26,6 +27,7 @@ bool NetServer::Update() {
         }
         catch (std::exception &e) {
             MODULE_ERROR("NetService Initialization error: {}", e.what());
+            m_serverAcceptor->close();
             bError = true;
         }
 
@@ -36,29 +38,72 @@ bool NetServer::Update() {
 
         std::list<std::shared_ptr<tcp::socket>> m_removeClient;
 
+        int len;
         // 处理消息接收
         for (const auto &kv : m_mapClient) {
-
-            MODULE_INFO("Server Receive Data");
-            std::array<char, 1024> buffer{};
+            std::array<char, 256> buffer{};
             asio::error_code err;
 
-            kv.first->receive(asio::buffer(buffer));
-//            kv.first->receive(asio::buffer(buffer), err);
-            if (err == asio::error::eof) {
-                MODULE_ERROR("read client data error {}", err);
+            try{
+                MODULE_INFO("Server receive data...");
+                len = kv.first->receive(asio::buffer(buffer));
+
+                if (err == asio::error::eof) {
+                    MODULE_ERROR("read client data error {}", err);
+                    bError = true;
+                }
+
+                else {
+                    MODULE_INFO("Server receive data: {}", buffer.data());
+                    kv.second->m_recvData.append(buffer.data(), len);
+                }
+
+            }
+            catch (std::exception &e){
+                MODULE_ERROR("read client data exception {}", e.what());
                 bError = true;
             }
-            else {
-                MODULE_INFO("Server receive data: {}", buffer.data());
-                kv.second->m_recvData.append(buffer.data());
+
+            if (bError) {
+                m_removeClient.push_back(kv.first);
             }
 
+            // 处理消息派发
+            else if(kv.second->m_recvData.length() >= 4){
+                char pData[256];
+                for(auto idx = 0; idx < len; idx++){
+                    pData[idx] = kv.second->m_recvData[idx];
+                }
+
+                size_t nIndex = 0;
+                uint16_t nSize = *(uint16_t *) pData;
+                uint16_t nType = *(uint16_t *) (pData + sizeof(uint16_t));
+                nType = 1020;
+                MODULE_INFO("message ID: {}", nType);
+
+                while ((kv.second->m_recvData.length() - nIndex) >= nSize) {
+                    // 处理消息派发
+                    auto itr = m_onReceiveCB.find(nType);
+
+                    if (itr != m_onReceiveCB.end()) {
+
+//                        for(auto idx = 4; idx < len; idx++){
+//                            pData[idx - 4] = kv.second->m_recvData[idx];
+//                        }
+                        for (const auto &onReceive : itr->second) {
+                            (*onReceive)
+                            (kv.second->m_guid, nType, kv.second->m_recvData.data() + 4, nSize);
+                        }
+                    }
+
+                    // 处理索引后移
+                    nIndex += nSize;
+                }
+
             // 处理发送消息
-            if (!bError && kv.second->m_sendData.length() > 0) {
-//              auto nLen = asio::write(kv.first, asio::buffer(kv.second->m_sendData.data(), kv.second->m_sendData.length()), err);
+            if (kv.second->m_sendData.length() > 0) {
                 auto nLen = kv.first->send(asio::buffer(kv.second->m_sendData.data(),
-                                                              kv.second->m_sendData.length()));
+                                                        kv.second->m_sendData.length()));
 
                 if (nLen > 0) {
                     kv.second->m_sendData.erase(0, nLen);
@@ -68,33 +113,6 @@ bool NetServer::Update() {
                     bError = true;
                 }
             }
-
-            if (bError) {
-                m_removeClient.push_back(kv.first);
-            }
-
-            // 处理消息派发
-            else if(kv.second->m_recvData.length() >= 4){
-                const auto *pData = kv.second->m_recvData.data();
-                size_t nIndex = 0;
-                uint16_t nSize = *(uint16_t *) pData;
-                uint16_t nType = *(uint16_t *) (pData + sizeof(uint16_t));
-                MODULE_INFO("message ID: {}", nType);
-
-                while ((kv.second->m_recvData.length() - nIndex) >= nSize) {
-                    // 处理消息派发
-                    auto itr = m_onReceiveCB.find(nType);
-
-                    if (itr != m_onReceiveCB.end()) {
-                        for (const auto &onReceive : itr->second) {
-                            (*onReceive)
-                            (kv.second->m_guid, nType, kv.second->m_recvData.data() + nIndex, nSize);
-                        }
-                    }
-
-                    // 处理索引后移
-                    nIndex += nSize;
-                }
                 if (nIndex != 0) {
                     kv.second->m_recvData.erase(0, nIndex);
                 }

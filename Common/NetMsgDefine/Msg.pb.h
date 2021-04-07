@@ -47,7 +47,7 @@ struct TableStruct_Msg_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[18]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -55,42 +55,6 @@ struct TableStruct_Msg_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Msg_2eproto;
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_Msg_2eproto_metadata_getter(int index);
-class Msg_ChangeState_C2S;
-struct Msg_ChangeState_C2SDefaultTypeInternal;
-extern Msg_ChangeState_C2SDefaultTypeInternal _Msg_ChangeState_C2S_default_instance_;
-class Msg_ChangeState_S2C;
-struct Msg_ChangeState_S2CDefaultTypeInternal;
-extern Msg_ChangeState_S2CDefaultTypeInternal _Msg_ChangeState_S2C_default_instance_;
-class Msg_CreateRoom_C2S;
-struct Msg_CreateRoom_C2SDefaultTypeInternal;
-extern Msg_CreateRoom_C2SDefaultTypeInternal _Msg_CreateRoom_C2S_default_instance_;
-class Msg_CreateRoom_S2C;
-struct Msg_CreateRoom_S2CDefaultTypeInternal;
-extern Msg_CreateRoom_S2CDefaultTypeInternal _Msg_CreateRoom_S2C_default_instance_;
-class Msg_EnterRoom_C2S;
-struct Msg_EnterRoom_C2SDefaultTypeInternal;
-extern Msg_EnterRoom_C2SDefaultTypeInternal _Msg_EnterRoom_C2S_default_instance_;
-class Msg_EnterRoom_S2C;
-struct Msg_EnterRoom_S2CDefaultTypeInternal;
-extern Msg_EnterRoom_S2CDefaultTypeInternal _Msg_EnterRoom_S2C_default_instance_;
-class Msg_ExitRoom_C2S;
-struct Msg_ExitRoom_C2SDefaultTypeInternal;
-extern Msg_ExitRoom_C2SDefaultTypeInternal _Msg_ExitRoom_C2S_default_instance_;
-class Msg_ExitRoom_S2C;
-struct Msg_ExitRoom_S2CDefaultTypeInternal;
-extern Msg_ExitRoom_S2CDefaultTypeInternal _Msg_ExitRoom_S2C_default_instance_;
-class Msg_Expel_C2S;
-struct Msg_Expel_C2SDefaultTypeInternal;
-extern Msg_Expel_C2SDefaultTypeInternal _Msg_Expel_C2S_default_instance_;
-class Msg_Expel_S2C;
-struct Msg_Expel_S2CDefaultTypeInternal;
-extern Msg_Expel_S2CDefaultTypeInternal _Msg_Expel_S2C_default_instance_;
-class Msg_FANGJIANLT_C2S;
-struct Msg_FANGJIANLT_C2SDefaultTypeInternal;
-extern Msg_FANGJIANLT_C2SDefaultTypeInternal _Msg_FANGJIANLT_C2S_default_instance_;
-class Msg_FANGJIANLT_S2C;
-struct Msg_FANGJIANLT_S2CDefaultTypeInternal;
-extern Msg_FANGJIANLT_S2CDefaultTypeInternal _Msg_FANGJIANLT_S2C_default_instance_;
 class Msg_Login_C2S;
 struct Msg_Login_C2SDefaultTypeInternal;
 extern Msg_Login_C2SDefaultTypeInternal _Msg_Login_C2S_default_instance_;
@@ -103,56 +67,25 @@ extern Msg_Register_C2SDefaultTypeInternal _Msg_Register_C2S_default_instance_;
 class Msg_Register_S2C;
 struct Msg_Register_S2CDefaultTypeInternal;
 extern Msg_Register_S2CDefaultTypeInternal _Msg_Register_S2C_default_instance_;
-class Msg_StartGame_C2S;
-struct Msg_StartGame_C2SDefaultTypeInternal;
-extern Msg_StartGame_C2SDefaultTypeInternal _Msg_StartGame_C2S_default_instance_;
-class Msg_StartGame_S2C;
-struct Msg_StartGame_S2CDefaultTypeInternal;
-extern Msg_StartGame_S2CDefaultTypeInternal _Msg_StartGame_S2C_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template<> ::Msg_ChangeState_C2S* Arena::CreateMaybeMessage<::Msg_ChangeState_C2S>(Arena*);
-template<> ::Msg_ChangeState_S2C* Arena::CreateMaybeMessage<::Msg_ChangeState_S2C>(Arena*);
-template<> ::Msg_CreateRoom_C2S* Arena::CreateMaybeMessage<::Msg_CreateRoom_C2S>(Arena*);
-template<> ::Msg_CreateRoom_S2C* Arena::CreateMaybeMessage<::Msg_CreateRoom_S2C>(Arena*);
-template<> ::Msg_EnterRoom_C2S* Arena::CreateMaybeMessage<::Msg_EnterRoom_C2S>(Arena*);
-template<> ::Msg_EnterRoom_S2C* Arena::CreateMaybeMessage<::Msg_EnterRoom_S2C>(Arena*);
-template<> ::Msg_ExitRoom_C2S* Arena::CreateMaybeMessage<::Msg_ExitRoom_C2S>(Arena*);
-template<> ::Msg_ExitRoom_S2C* Arena::CreateMaybeMessage<::Msg_ExitRoom_S2C>(Arena*);
-template<> ::Msg_Expel_C2S* Arena::CreateMaybeMessage<::Msg_Expel_C2S>(Arena*);
-template<> ::Msg_Expel_S2C* Arena::CreateMaybeMessage<::Msg_Expel_S2C>(Arena*);
-template<> ::Msg_FANGJIANLT_C2S* Arena::CreateMaybeMessage<::Msg_FANGJIANLT_C2S>(Arena*);
-template<> ::Msg_FANGJIANLT_S2C* Arena::CreateMaybeMessage<::Msg_FANGJIANLT_S2C>(Arena*);
 template<> ::Msg_Login_C2S* Arena::CreateMaybeMessage<::Msg_Login_C2S>(Arena*);
 template<> ::Msg_Login_S2C* Arena::CreateMaybeMessage<::Msg_Login_S2C>(Arena*);
 template<> ::Msg_Register_C2S* Arena::CreateMaybeMessage<::Msg_Register_C2S>(Arena*);
 template<> ::Msg_Register_S2C* Arena::CreateMaybeMessage<::Msg_Register_S2C>(Arena*);
-template<> ::Msg_StartGame_C2S* Arena::CreateMaybeMessage<::Msg_StartGame_C2S>(Arena*);
-template<> ::Msg_StartGame_S2C* Arena::CreateMaybeMessage<::Msg_StartGame_S2C>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
 enum MsgType : int {
+  UNDEFINED = 0,
   REGISTER_C2S = 1010,
   REGISTER_S2C = 2010,
   LOGIN_C2S = 1020,
   LOGIN_S2C = 2020,
-  CREATE_ROOM_C2S = 1030,
-  CREATE_ROOM_S2C = 2030,
-  ENTER_ROOM_C2S = 1040,
-  ENTER_ROOM_S2C = 2040,
-  CHANGE_STATE_C2S = 1050,
-  CHANGE_STATE_S2C = 2050,
-  EXPEL_C2S = 1060,
-  EXPEL_S2C = 2060,
-  START_GAME_C2S = 1070,
-  START_GAME_S2C = 2070,
-  EXIT_ROOM_C2S = 1080,
-  EXIT_ROOM_S2C = 2080,
-  FANGJIANLT_C2S = 1110,
-  FANGJIANLT_S2C = 2110
+  MsgType_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
+  MsgType_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool MsgType_IsValid(int value);
-constexpr MsgType MsgType_MIN = REGISTER_C2S;
-constexpr MsgType MsgType_MAX = FANGJIANLT_S2C;
+constexpr MsgType MsgType_MIN = UNDEFINED;
+constexpr MsgType MsgType_MAX = LOGIN_S2C;
 constexpr int MsgType_ARRAYSIZE = MsgType_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* MsgType_descriptor();
@@ -195,13 +128,6 @@ class Msg_Register_C2S PROTOBUF_FINAL :
       CopyFrom(from);
     }
     return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
   static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
@@ -291,63 +217,51 @@ class Msg_Register_C2S PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSzNameFieldNumber = 1,
-    kSzPasswordFieldNumber = 2,
+    kNameFieldNumber = 1,
+    kPasswordFieldNumber = 2,
   };
-  // required bytes szName = 1;
-  bool has_szname() const;
+  // string Name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
   private:
-  bool _internal_has_szname() const;
-  public:
-  void clear_szname();
-  const std::string& szname() const;
-  void set_szname(const std::string& value);
-  void set_szname(std::string&& value);
-  void set_szname(const char* value);
-  void set_szname(const void* value, size_t size);
-  std::string* mutable_szname();
-  std::string* release_szname();
-  void set_allocated_szname(std::string* szname);
-  private:
-  const std::string& _internal_szname() const;
-  void _internal_set_szname(const std::string& value);
-  std::string* _internal_mutable_szname();
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
   public:
 
-  // required bytes szPassword = 2;
-  bool has_szpassword() const;
+  // string Password = 2;
+  void clear_password();
+  const std::string& password() const;
+  void set_password(const std::string& value);
+  void set_password(std::string&& value);
+  void set_password(const char* value);
+  void set_password(const char* value, size_t size);
+  std::string* mutable_password();
+  std::string* release_password();
+  void set_allocated_password(std::string* password);
   private:
-  bool _internal_has_szpassword() const;
-  public:
-  void clear_szpassword();
-  const std::string& szpassword() const;
-  void set_szpassword(const std::string& value);
-  void set_szpassword(std::string&& value);
-  void set_szpassword(const char* value);
-  void set_szpassword(const void* value, size_t size);
-  std::string* mutable_szpassword();
-  std::string* release_szpassword();
-  void set_allocated_szpassword(std::string* szpassword);
-  private:
-  const std::string& _internal_szpassword() const;
-  void _internal_set_szpassword(const std::string& value);
-  std::string* _internal_mutable_szpassword();
+  const std::string& _internal_password() const;
+  void _internal_set_password(const std::string& value);
+  std::string* _internal_mutable_password();
   public:
 
   // @@protoc_insertion_point(class_scope:Msg_Register_C2S)
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szname_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szpassword_;
   friend struct ::TableStruct_Msg_2eproto;
 };
 // -------------------------------------------------------------------
@@ -376,13 +290,6 @@ class Msg_Register_S2C PROTOBUF_FINAL :
       CopyFrom(from);
     }
     return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
   static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
@@ -474,11 +381,7 @@ class Msg_Register_S2C PROTOBUF_FINAL :
   enum : int {
     kResultFieldNumber = 1,
   };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
+  // int32 result = 1;
   void clear_result();
   ::PROTOBUF_NAMESPACE_ID::int32 result() const;
   void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -494,9 +397,8 @@ class Msg_Register_S2C PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::int32 result_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Msg_2eproto;
 };
 // -------------------------------------------------------------------
@@ -525,13 +427,6 @@ class Msg_Login_C2S PROTOBUF_FINAL :
       CopyFrom(from);
     }
     return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
   static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
@@ -621,63 +516,51 @@ class Msg_Login_C2S PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSzNameFieldNumber = 1,
-    kSzPasswordFieldNumber = 2,
+    kNameFieldNumber = 1,
+    kPasswordFieldNumber = 2,
   };
-  // required bytes szName = 1;
-  bool has_szname() const;
+  // string Name = 1;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
   private:
-  bool _internal_has_szname() const;
-  public:
-  void clear_szname();
-  const std::string& szname() const;
-  void set_szname(const std::string& value);
-  void set_szname(std::string&& value);
-  void set_szname(const char* value);
-  void set_szname(const void* value, size_t size);
-  std::string* mutable_szname();
-  std::string* release_szname();
-  void set_allocated_szname(std::string* szname);
-  private:
-  const std::string& _internal_szname() const;
-  void _internal_set_szname(const std::string& value);
-  std::string* _internal_mutable_szname();
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
   public:
 
-  // required bytes szPassword = 2;
-  bool has_szpassword() const;
+  // string Password = 2;
+  void clear_password();
+  const std::string& password() const;
+  void set_password(const std::string& value);
+  void set_password(std::string&& value);
+  void set_password(const char* value);
+  void set_password(const char* value, size_t size);
+  std::string* mutable_password();
+  std::string* release_password();
+  void set_allocated_password(std::string* password);
   private:
-  bool _internal_has_szpassword() const;
-  public:
-  void clear_szpassword();
-  const std::string& szpassword() const;
-  void set_szpassword(const std::string& value);
-  void set_szpassword(std::string&& value);
-  void set_szpassword(const char* value);
-  void set_szpassword(const void* value, size_t size);
-  std::string* mutable_szpassword();
-  std::string* release_szpassword();
-  void set_allocated_szpassword(std::string* szpassword);
-  private:
-  const std::string& _internal_szpassword() const;
-  void _internal_set_szpassword(const std::string& value);
-  std::string* _internal_mutable_szpassword();
+  const std::string& _internal_password() const;
+  void _internal_set_password(const std::string& value);
+  std::string* _internal_mutable_password();
   public:
 
   // @@protoc_insertion_point(class_scope:Msg_Login_C2S)
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr password_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szname_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szpassword_;
   friend struct ::TableStruct_Msg_2eproto;
 };
 // -------------------------------------------------------------------
@@ -706,13 +589,6 @@ class Msg_Login_S2C PROTOBUF_FINAL :
       CopyFrom(from);
     }
     return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
   }
 
   static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
@@ -805,11 +681,7 @@ class Msg_Login_S2C PROTOBUF_FINAL :
     kResultFieldNumber = 1,
     kIdFieldNumber = 2,
   };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
+  // int32 result = 1;
   void clear_result();
   ::PROTOBUF_NAMESPACE_ID::int32 result() const;
   void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -818,11 +690,7 @@ class Msg_Login_S2C PROTOBUF_FINAL :
   void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // required int32 id = 2;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
+  // int32 id = 2;
   void clear_id();
   ::PROTOBUF_NAMESPACE_ID::int32 id() const;
   void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -835,2416 +703,12 @@ class Msg_Login_S2C PROTOBUF_FINAL :
  private:
   class _Internal;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::int32 result_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_CreateRoom_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_CreateRoom_C2S) */ {
- public:
-  inline Msg_CreateRoom_C2S() : Msg_CreateRoom_C2S(nullptr) {}
-  virtual ~Msg_CreateRoom_C2S();
-  explicit constexpr Msg_CreateRoom_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_CreateRoom_C2S(const Msg_CreateRoom_C2S& from);
-  Msg_CreateRoom_C2S(Msg_CreateRoom_C2S&& from) noexcept
-    : Msg_CreateRoom_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_CreateRoom_C2S& operator=(const Msg_CreateRoom_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_CreateRoom_C2S& operator=(Msg_CreateRoom_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_CreateRoom_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_CreateRoom_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_CreateRoom_C2S*>(
-               &_Msg_CreateRoom_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    4;
-
-  friend void swap(Msg_CreateRoom_C2S& a, Msg_CreateRoom_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_CreateRoom_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_CreateRoom_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_CreateRoom_C2S* New() const final {
-    return CreateMaybeMessage<Msg_CreateRoom_C2S>(nullptr);
-  }
-
-  Msg_CreateRoom_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_CreateRoom_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_CreateRoom_C2S& from);
-  void MergeFrom(const Msg_CreateRoom_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_CreateRoom_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_CreateRoom_C2S";
-  }
-  protected:
-  explicit Msg_CreateRoom_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdFieldNumber = 1,
-  };
-  // required int32 id = 1;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_CreateRoom_C2S)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_CreateRoom_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_CreateRoom_S2C) */ {
- public:
-  inline Msg_CreateRoom_S2C() : Msg_CreateRoom_S2C(nullptr) {}
-  virtual ~Msg_CreateRoom_S2C();
-  explicit constexpr Msg_CreateRoom_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_CreateRoom_S2C(const Msg_CreateRoom_S2C& from);
-  Msg_CreateRoom_S2C(Msg_CreateRoom_S2C&& from) noexcept
-    : Msg_CreateRoom_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_CreateRoom_S2C& operator=(const Msg_CreateRoom_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_CreateRoom_S2C& operator=(Msg_CreateRoom_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_CreateRoom_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_CreateRoom_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_CreateRoom_S2C*>(
-               &_Msg_CreateRoom_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    5;
-
-  friend void swap(Msg_CreateRoom_S2C& a, Msg_CreateRoom_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_CreateRoom_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_CreateRoom_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_CreateRoom_S2C* New() const final {
-    return CreateMaybeMessage<Msg_CreateRoom_S2C>(nullptr);
-  }
-
-  Msg_CreateRoom_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_CreateRoom_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_CreateRoom_S2C& from);
-  void MergeFrom(const Msg_CreateRoom_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_CreateRoom_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_CreateRoom_S2C";
-  }
-  protected:
-  explicit Msg_CreateRoom_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_CreateRoom_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_EnterRoom_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_EnterRoom_C2S) */ {
- public:
-  inline Msg_EnterRoom_C2S() : Msg_EnterRoom_C2S(nullptr) {}
-  virtual ~Msg_EnterRoom_C2S();
-  explicit constexpr Msg_EnterRoom_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_EnterRoom_C2S(const Msg_EnterRoom_C2S& from);
-  Msg_EnterRoom_C2S(Msg_EnterRoom_C2S&& from) noexcept
-    : Msg_EnterRoom_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_EnterRoom_C2S& operator=(const Msg_EnterRoom_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_EnterRoom_C2S& operator=(Msg_EnterRoom_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_EnterRoom_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_EnterRoom_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_EnterRoom_C2S*>(
-               &_Msg_EnterRoom_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    6;
-
-  friend void swap(Msg_EnterRoom_C2S& a, Msg_EnterRoom_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_EnterRoom_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_EnterRoom_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_EnterRoom_C2S* New() const final {
-    return CreateMaybeMessage<Msg_EnterRoom_C2S>(nullptr);
-  }
-
-  Msg_EnterRoom_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_EnterRoom_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_EnterRoom_C2S& from);
-  void MergeFrom(const Msg_EnterRoom_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_EnterRoom_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_EnterRoom_C2S";
-  }
-  protected:
-  explicit Msg_EnterRoom_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdFieldNumber = 1,
-  };
-  // required int32 id = 1;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_EnterRoom_C2S)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_EnterRoom_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_EnterRoom_S2C) */ {
- public:
-  inline Msg_EnterRoom_S2C() : Msg_EnterRoom_S2C(nullptr) {}
-  virtual ~Msg_EnterRoom_S2C();
-  explicit constexpr Msg_EnterRoom_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_EnterRoom_S2C(const Msg_EnterRoom_S2C& from);
-  Msg_EnterRoom_S2C(Msg_EnterRoom_S2C&& from) noexcept
-    : Msg_EnterRoom_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_EnterRoom_S2C& operator=(const Msg_EnterRoom_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_EnterRoom_S2C& operator=(Msg_EnterRoom_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_EnterRoom_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_EnterRoom_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_EnterRoom_S2C*>(
-               &_Msg_EnterRoom_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    7;
-
-  friend void swap(Msg_EnterRoom_S2C& a, Msg_EnterRoom_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_EnterRoom_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_EnterRoom_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_EnterRoom_S2C* New() const final {
-    return CreateMaybeMessage<Msg_EnterRoom_S2C>(nullptr);
-  }
-
-  Msg_EnterRoom_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_EnterRoom_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_EnterRoom_S2C& from);
-  void MergeFrom(const Msg_EnterRoom_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_EnterRoom_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_EnterRoom_S2C";
-  }
-  protected:
-  explicit Msg_EnterRoom_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSzNameFieldNumber = 3,
-    kResultFieldNumber = 1,
-    kNumberFieldNumber = 2,
-  };
-  // optional bytes szName = 3;
-  bool has_szname() const;
-  private:
-  bool _internal_has_szname() const;
-  public:
-  void clear_szname();
-  const std::string& szname() const;
-  void set_szname(const std::string& value);
-  void set_szname(std::string&& value);
-  void set_szname(const char* value);
-  void set_szname(const void* value, size_t size);
-  std::string* mutable_szname();
-  std::string* release_szname();
-  void set_allocated_szname(std::string* szname);
-  private:
-  const std::string& _internal_szname() const;
-  void _internal_set_szname(const std::string& value);
-  std::string* _internal_mutable_szname();
-  public:
-
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number = 2;
-  bool has_number() const;
-  private:
-  bool _internal_has_number() const;
-  public:
-  void clear_number();
-  ::PROTOBUF_NAMESPACE_ID::int32 number() const;
-  void set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number() const;
-  void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_EnterRoom_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szname_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_ChangeState_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_ChangeState_C2S) */ {
- public:
-  inline Msg_ChangeState_C2S() : Msg_ChangeState_C2S(nullptr) {}
-  virtual ~Msg_ChangeState_C2S();
-  explicit constexpr Msg_ChangeState_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_ChangeState_C2S(const Msg_ChangeState_C2S& from);
-  Msg_ChangeState_C2S(Msg_ChangeState_C2S&& from) noexcept
-    : Msg_ChangeState_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_ChangeState_C2S& operator=(const Msg_ChangeState_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_ChangeState_C2S& operator=(Msg_ChangeState_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_ChangeState_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_ChangeState_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_ChangeState_C2S*>(
-               &_Msg_ChangeState_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    8;
-
-  friend void swap(Msg_ChangeState_C2S& a, Msg_ChangeState_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_ChangeState_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_ChangeState_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_ChangeState_C2S* New() const final {
-    return CreateMaybeMessage<Msg_ChangeState_C2S>(nullptr);
-  }
-
-  Msg_ChangeState_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_ChangeState_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_ChangeState_C2S& from);
-  void MergeFrom(const Msg_ChangeState_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_ChangeState_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_ChangeState_C2S";
-  }
-  protected:
-  explicit Msg_ChangeState_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-    kNumber1FieldNumber = 2,
-    kNumber2FieldNumber = 3,
-    kTypeFieldNumber = 4,
-    kReadyFieldNumber = 5,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number1 = 2;
-  bool has_number1() const;
-  private:
-  bool _internal_has_number1() const;
-  public:
-  void clear_number1();
-  ::PROTOBUF_NAMESPACE_ID::int32 number1() const;
-  void set_number1(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number1() const;
-  void _internal_set_number1(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number2 = 3;
-  bool has_number2() const;
-  private:
-  bool _internal_has_number2() const;
-  public:
-  void clear_number2();
-  ::PROTOBUF_NAMESPACE_ID::int32 number2() const;
-  void set_number2(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number2() const;
-  void _internal_set_number2(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 type = 4;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  ::PROTOBUF_NAMESPACE_ID::int32 type() const;
-  void set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_type() const;
-  void _internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 ready = 5;
-  bool has_ready() const;
-  private:
-  bool _internal_has_ready() const;
-  public:
-  void clear_ready();
-  ::PROTOBUF_NAMESPACE_ID::int32 ready() const;
-  void set_ready(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_ready() const;
-  void _internal_set_ready(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_ChangeState_C2S)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number1_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number2_;
-  ::PROTOBUF_NAMESPACE_ID::int32 type_;
-  ::PROTOBUF_NAMESPACE_ID::int32 ready_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_ChangeState_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_ChangeState_S2C) */ {
- public:
-  inline Msg_ChangeState_S2C() : Msg_ChangeState_S2C(nullptr) {}
-  virtual ~Msg_ChangeState_S2C();
-  explicit constexpr Msg_ChangeState_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_ChangeState_S2C(const Msg_ChangeState_S2C& from);
-  Msg_ChangeState_S2C(Msg_ChangeState_S2C&& from) noexcept
-    : Msg_ChangeState_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_ChangeState_S2C& operator=(const Msg_ChangeState_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_ChangeState_S2C& operator=(Msg_ChangeState_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_ChangeState_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_ChangeState_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_ChangeState_S2C*>(
-               &_Msg_ChangeState_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    9;
-
-  friend void swap(Msg_ChangeState_S2C& a, Msg_ChangeState_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_ChangeState_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_ChangeState_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_ChangeState_S2C* New() const final {
-    return CreateMaybeMessage<Msg_ChangeState_S2C>(nullptr);
-  }
-
-  Msg_ChangeState_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_ChangeState_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_ChangeState_S2C& from);
-  void MergeFrom(const Msg_ChangeState_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_ChangeState_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_ChangeState_S2C";
-  }
-  protected:
-  explicit Msg_ChangeState_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-    kNumber1FieldNumber = 2,
-    kNumber2FieldNumber = 3,
-    kTypeFieldNumber = 4,
-    kReadyFieldNumber = 5,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number1 = 2;
-  bool has_number1() const;
-  private:
-  bool _internal_has_number1() const;
-  public:
-  void clear_number1();
-  ::PROTOBUF_NAMESPACE_ID::int32 number1() const;
-  void set_number1(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number1() const;
-  void _internal_set_number1(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number2 = 3;
-  bool has_number2() const;
-  private:
-  bool _internal_has_number2() const;
-  public:
-  void clear_number2();
-  ::PROTOBUF_NAMESPACE_ID::int32 number2() const;
-  void set_number2(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number2() const;
-  void _internal_set_number2(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 type = 4;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  ::PROTOBUF_NAMESPACE_ID::int32 type() const;
-  void set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_type() const;
-  void _internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 ready = 5;
-  bool has_ready() const;
-  private:
-  bool _internal_has_ready() const;
-  public:
-  void clear_ready();
-  ::PROTOBUF_NAMESPACE_ID::int32 ready() const;
-  void set_ready(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_ready() const;
-  void _internal_set_ready(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_ChangeState_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number1_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number2_;
-  ::PROTOBUF_NAMESPACE_ID::int32 type_;
-  ::PROTOBUF_NAMESPACE_ID::int32 ready_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_Expel_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_Expel_C2S) */ {
- public:
-  inline Msg_Expel_C2S() : Msg_Expel_C2S(nullptr) {}
-  virtual ~Msg_Expel_C2S();
-  explicit constexpr Msg_Expel_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_Expel_C2S(const Msg_Expel_C2S& from);
-  Msg_Expel_C2S(Msg_Expel_C2S&& from) noexcept
-    : Msg_Expel_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_Expel_C2S& operator=(const Msg_Expel_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_Expel_C2S& operator=(Msg_Expel_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_Expel_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_Expel_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_Expel_C2S*>(
-               &_Msg_Expel_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    10;
-
-  friend void swap(Msg_Expel_C2S& a, Msg_Expel_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_Expel_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_Expel_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_Expel_C2S* New() const final {
-    return CreateMaybeMessage<Msg_Expel_C2S>(nullptr);
-  }
-
-  Msg_Expel_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_Expel_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_Expel_C2S& from);
-  void MergeFrom(const Msg_Expel_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_Expel_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_Expel_C2S";
-  }
-  protected:
-  explicit Msg_Expel_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kNumberFieldNumber = 1,
-    kIdFieldNumber = 2,
-  };
-  // required int32 number = 1;
-  bool has_number() const;
-  private:
-  bool _internal_has_number() const;
-  public:
-  void clear_number();
-  ::PROTOBUF_NAMESPACE_ID::int32 number() const;
-  void set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number() const;
-  void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 id = 2;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_Expel_C2S)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number_;
-  ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_Expel_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_Expel_S2C) */ {
- public:
-  inline Msg_Expel_S2C() : Msg_Expel_S2C(nullptr) {}
-  virtual ~Msg_Expel_S2C();
-  explicit constexpr Msg_Expel_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_Expel_S2C(const Msg_Expel_S2C& from);
-  Msg_Expel_S2C(Msg_Expel_S2C&& from) noexcept
-    : Msg_Expel_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_Expel_S2C& operator=(const Msg_Expel_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_Expel_S2C& operator=(Msg_Expel_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_Expel_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_Expel_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_Expel_S2C*>(
-               &_Msg_Expel_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    11;
-
-  friend void swap(Msg_Expel_S2C& a, Msg_Expel_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_Expel_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_Expel_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_Expel_S2C* New() const final {
-    return CreateMaybeMessage<Msg_Expel_S2C>(nullptr);
-  }
-
-  Msg_Expel_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_Expel_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_Expel_S2C& from);
-  void MergeFrom(const Msg_Expel_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_Expel_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_Expel_S2C";
-  }
-  protected:
-  explicit Msg_Expel_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-    kNumberFieldNumber = 2,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number = 2;
-  bool has_number() const;
-  private:
-  bool _internal_has_number() const;
-  public:
-  void clear_number();
-  ::PROTOBUF_NAMESPACE_ID::int32 number() const;
-  void set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number() const;
-  void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_Expel_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_StartGame_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_StartGame_C2S) */ {
- public:
-  inline Msg_StartGame_C2S() : Msg_StartGame_C2S(nullptr) {}
-  virtual ~Msg_StartGame_C2S();
-  explicit constexpr Msg_StartGame_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_StartGame_C2S(const Msg_StartGame_C2S& from);
-  Msg_StartGame_C2S(Msg_StartGame_C2S&& from) noexcept
-    : Msg_StartGame_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_StartGame_C2S& operator=(const Msg_StartGame_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_StartGame_C2S& operator=(Msg_StartGame_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_StartGame_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_StartGame_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_StartGame_C2S*>(
-               &_Msg_StartGame_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    12;
-
-  friend void swap(Msg_StartGame_C2S& a, Msg_StartGame_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_StartGame_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_StartGame_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_StartGame_C2S* New() const final {
-    return CreateMaybeMessage<Msg_StartGame_C2S>(nullptr);
-  }
-
-  Msg_StartGame_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_StartGame_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_StartGame_C2S& from);
-  void MergeFrom(const Msg_StartGame_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_StartGame_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_StartGame_C2S";
-  }
-  protected:
-  explicit Msg_StartGame_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdFieldNumber = 1,
-  };
-  // required int32 id = 1;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_StartGame_C2S)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_StartGame_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_StartGame_S2C) */ {
- public:
-  inline Msg_StartGame_S2C() : Msg_StartGame_S2C(nullptr) {}
-  virtual ~Msg_StartGame_S2C();
-  explicit constexpr Msg_StartGame_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_StartGame_S2C(const Msg_StartGame_S2C& from);
-  Msg_StartGame_S2C(Msg_StartGame_S2C&& from) noexcept
-    : Msg_StartGame_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_StartGame_S2C& operator=(const Msg_StartGame_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_StartGame_S2C& operator=(Msg_StartGame_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_StartGame_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_StartGame_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_StartGame_S2C*>(
-               &_Msg_StartGame_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    13;
-
-  friend void swap(Msg_StartGame_S2C& a, Msg_StartGame_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_StartGame_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_StartGame_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_StartGame_S2C* New() const final {
-    return CreateMaybeMessage<Msg_StartGame_S2C>(nullptr);
-  }
-
-  Msg_StartGame_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_StartGame_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_StartGame_S2C& from);
-  void MergeFrom(const Msg_StartGame_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_StartGame_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_StartGame_S2C";
-  }
-  protected:
-  explicit Msg_StartGame_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_StartGame_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_ExitRoom_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_ExitRoom_C2S) */ {
- public:
-  inline Msg_ExitRoom_C2S() : Msg_ExitRoom_C2S(nullptr) {}
-  virtual ~Msg_ExitRoom_C2S();
-  explicit constexpr Msg_ExitRoom_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_ExitRoom_C2S(const Msg_ExitRoom_C2S& from);
-  Msg_ExitRoom_C2S(Msg_ExitRoom_C2S&& from) noexcept
-    : Msg_ExitRoom_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_ExitRoom_C2S& operator=(const Msg_ExitRoom_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_ExitRoom_C2S& operator=(Msg_ExitRoom_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_ExitRoom_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_ExitRoom_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_ExitRoom_C2S*>(
-               &_Msg_ExitRoom_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    14;
-
-  friend void swap(Msg_ExitRoom_C2S& a, Msg_ExitRoom_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_ExitRoom_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_ExitRoom_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_ExitRoom_C2S* New() const final {
-    return CreateMaybeMessage<Msg_ExitRoom_C2S>(nullptr);
-  }
-
-  Msg_ExitRoom_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_ExitRoom_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_ExitRoom_C2S& from);
-  void MergeFrom(const Msg_ExitRoom_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_ExitRoom_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_ExitRoom_C2S";
-  }
-  protected:
-  explicit Msg_ExitRoom_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kIdFieldNumber = 1,
-    kNumberFieldNumber = 2,
-  };
-  // required int32 id = 1;
-  bool has_id() const;
-  private:
-  bool _internal_has_id() const;
-  public:
-  void clear_id();
-  ::PROTOBUF_NAMESPACE_ID::int32 id() const;
-  void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_id() const;
-  void _internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // required int32 number = 2;
-  bool has_number() const;
-  private:
-  bool _internal_has_number() const;
-  public:
-  void clear_number();
-  ::PROTOBUF_NAMESPACE_ID::int32 number() const;
-  void set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number() const;
-  void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_ExitRoom_C2S)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_ExitRoom_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_ExitRoom_S2C) */ {
- public:
-  inline Msg_ExitRoom_S2C() : Msg_ExitRoom_S2C(nullptr) {}
-  virtual ~Msg_ExitRoom_S2C();
-  explicit constexpr Msg_ExitRoom_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_ExitRoom_S2C(const Msg_ExitRoom_S2C& from);
-  Msg_ExitRoom_S2C(Msg_ExitRoom_S2C&& from) noexcept
-    : Msg_ExitRoom_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_ExitRoom_S2C& operator=(const Msg_ExitRoom_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_ExitRoom_S2C& operator=(Msg_ExitRoom_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_ExitRoom_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_ExitRoom_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_ExitRoom_S2C*>(
-               &_Msg_ExitRoom_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    15;
-
-  friend void swap(Msg_ExitRoom_S2C& a, Msg_ExitRoom_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_ExitRoom_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_ExitRoom_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_ExitRoom_S2C* New() const final {
-    return CreateMaybeMessage<Msg_ExitRoom_S2C>(nullptr);
-  }
-
-  Msg_ExitRoom_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_ExitRoom_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_ExitRoom_S2C& from);
-  void MergeFrom(const Msg_ExitRoom_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_ExitRoom_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_ExitRoom_S2C";
-  }
-  protected:
-  explicit Msg_ExitRoom_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kResultFieldNumber = 1,
-    kNumberFieldNumber = 2,
-  };
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // optional int32 number = 2;
-  bool has_number() const;
-  private:
-  bool _internal_has_number() const;
-  public:
-  void clear_number();
-  ::PROTOBUF_NAMESPACE_ID::int32 number() const;
-  void set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_number() const;
-  void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_ExitRoom_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
-  ::PROTOBUF_NAMESPACE_ID::int32 number_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_FANGJIANLT_C2S PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_FANGJIANLT_C2S) */ {
- public:
-  inline Msg_FANGJIANLT_C2S() : Msg_FANGJIANLT_C2S(nullptr) {}
-  virtual ~Msg_FANGJIANLT_C2S();
-  explicit constexpr Msg_FANGJIANLT_C2S(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_FANGJIANLT_C2S(const Msg_FANGJIANLT_C2S& from);
-  Msg_FANGJIANLT_C2S(Msg_FANGJIANLT_C2S&& from) noexcept
-    : Msg_FANGJIANLT_C2S() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_FANGJIANLT_C2S& operator=(const Msg_FANGJIANLT_C2S& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_FANGJIANLT_C2S& operator=(Msg_FANGJIANLT_C2S&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_FANGJIANLT_C2S& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_FANGJIANLT_C2S* internal_default_instance() {
-    return reinterpret_cast<const Msg_FANGJIANLT_C2S*>(
-               &_Msg_FANGJIANLT_C2S_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    16;
-
-  friend void swap(Msg_FANGJIANLT_C2S& a, Msg_FANGJIANLT_C2S& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_FANGJIANLT_C2S* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_FANGJIANLT_C2S* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_FANGJIANLT_C2S* New() const final {
-    return CreateMaybeMessage<Msg_FANGJIANLT_C2S>(nullptr);
-  }
-
-  Msg_FANGJIANLT_C2S* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_FANGJIANLT_C2S>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_FANGJIANLT_C2S& from);
-  void MergeFrom(const Msg_FANGJIANLT_C2S& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_FANGJIANLT_C2S* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_FANGJIANLT_C2S";
-  }
-  protected:
-  explicit Msg_FANGJIANLT_C2S(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSzContentFieldNumber = 1,
-    kSzNameFieldNumber = 2,
-    kHouseidFieldNumber = 3,
-  };
-  // required bytes szContent = 1;
-  bool has_szcontent() const;
-  private:
-  bool _internal_has_szcontent() const;
-  public:
-  void clear_szcontent();
-  const std::string& szcontent() const;
-  void set_szcontent(const std::string& value);
-  void set_szcontent(std::string&& value);
-  void set_szcontent(const char* value);
-  void set_szcontent(const void* value, size_t size);
-  std::string* mutable_szcontent();
-  std::string* release_szcontent();
-  void set_allocated_szcontent(std::string* szcontent);
-  private:
-  const std::string& _internal_szcontent() const;
-  void _internal_set_szcontent(const std::string& value);
-  std::string* _internal_mutable_szcontent();
-  public:
-
-  // required bytes szName = 2;
-  bool has_szname() const;
-  private:
-  bool _internal_has_szname() const;
-  public:
-  void clear_szname();
-  const std::string& szname() const;
-  void set_szname(const std::string& value);
-  void set_szname(std::string&& value);
-  void set_szname(const char* value);
-  void set_szname(const void* value, size_t size);
-  std::string* mutable_szname();
-  std::string* release_szname();
-  void set_allocated_szname(std::string* szname);
-  private:
-  const std::string& _internal_szname() const;
-  void _internal_set_szname(const std::string& value);
-  std::string* _internal_mutable_szname();
-  public:
-
-  // required int32 houseid = 3;
-  bool has_houseid() const;
-  private:
-  bool _internal_has_houseid() const;
-  public:
-  void clear_houseid();
-  ::PROTOBUF_NAMESPACE_ID::int32 houseid() const;
-  void set_houseid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_houseid() const;
-  void _internal_set_houseid(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_FANGJIANLT_C2S)
- private:
-  class _Internal;
-
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szcontent_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szname_;
-  ::PROTOBUF_NAMESPACE_ID::int32 houseid_;
-  friend struct ::TableStruct_Msg_2eproto;
-};
-// -------------------------------------------------------------------
-
-class Msg_FANGJIANLT_S2C PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Msg_FANGJIANLT_S2C) */ {
- public:
-  inline Msg_FANGJIANLT_S2C() : Msg_FANGJIANLT_S2C(nullptr) {}
-  virtual ~Msg_FANGJIANLT_S2C();
-  explicit constexpr Msg_FANGJIANLT_S2C(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-
-  Msg_FANGJIANLT_S2C(const Msg_FANGJIANLT_S2C& from);
-  Msg_FANGJIANLT_S2C(Msg_FANGJIANLT_S2C&& from) noexcept
-    : Msg_FANGJIANLT_S2C() {
-    *this = ::std::move(from);
-  }
-
-  inline Msg_FANGJIANLT_S2C& operator=(const Msg_FANGJIANLT_S2C& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline Msg_FANGJIANLT_S2C& operator=(Msg_FANGJIANLT_S2C&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const Msg_FANGJIANLT_S2C& default_instance() {
-    return *internal_default_instance();
-  }
-  static inline const Msg_FANGJIANLT_S2C* internal_default_instance() {
-    return reinterpret_cast<const Msg_FANGJIANLT_S2C*>(
-               &_Msg_FANGJIANLT_S2C_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    17;
-
-  friend void swap(Msg_FANGJIANLT_S2C& a, Msg_FANGJIANLT_S2C& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(Msg_FANGJIANLT_S2C* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(Msg_FANGJIANLT_S2C* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline Msg_FANGJIANLT_S2C* New() const final {
-    return CreateMaybeMessage<Msg_FANGJIANLT_S2C>(nullptr);
-  }
-
-  Msg_FANGJIANLT_S2C* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Msg_FANGJIANLT_S2C>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Msg_FANGJIANLT_S2C& from);
-  void MergeFrom(const Msg_FANGJIANLT_S2C& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(Msg_FANGJIANLT_S2C* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Msg_FANGJIANLT_S2C";
-  }
-  protected:
-  explicit Msg_FANGJIANLT_S2C(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    return ::descriptor_table_Msg_2eproto_metadata_getter(kIndexInFileMessages);
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kSzContentFieldNumber = 2,
-    kSzNameFieldNumber = 3,
-    kResultFieldNumber = 1,
-  };
-  // optional bytes szContent = 2;
-  bool has_szcontent() const;
-  private:
-  bool _internal_has_szcontent() const;
-  public:
-  void clear_szcontent();
-  const std::string& szcontent() const;
-  void set_szcontent(const std::string& value);
-  void set_szcontent(std::string&& value);
-  void set_szcontent(const char* value);
-  void set_szcontent(const void* value, size_t size);
-  std::string* mutable_szcontent();
-  std::string* release_szcontent();
-  void set_allocated_szcontent(std::string* szcontent);
-  private:
-  const std::string& _internal_szcontent() const;
-  void _internal_set_szcontent(const std::string& value);
-  std::string* _internal_mutable_szcontent();
-  public:
-
-  // optional bytes szName = 3;
-  bool has_szname() const;
-  private:
-  bool _internal_has_szname() const;
-  public:
-  void clear_szname();
-  const std::string& szname() const;
-  void set_szname(const std::string& value);
-  void set_szname(std::string&& value);
-  void set_szname(const char* value);
-  void set_szname(const void* value, size_t size);
-  std::string* mutable_szname();
-  std::string* release_szname();
-  void set_allocated_szname(std::string* szname);
-  private:
-  const std::string& _internal_szname() const;
-  void _internal_set_szname(const std::string& value);
-  std::string* _internal_mutable_szname();
-  public:
-
-  // required int32 result = 1;
-  bool has_result() const;
-  private:
-  bool _internal_has_result() const;
-  public:
-  void clear_result();
-  ::PROTOBUF_NAMESPACE_ID::int32 result() const;
-  void set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  private:
-  ::PROTOBUF_NAMESPACE_ID::int32 _internal_result() const;
-  void _internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:Msg_FANGJIANLT_S2C)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szcontent_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr szname_;
-  ::PROTOBUF_NAMESPACE_ID::int32 result_;
   friend struct ::TableStruct_Msg_2eproto;
 };
 // ===================================================================
@@ -3258,167 +722,135 @@ class Msg_FANGJIANLT_S2C PROTOBUF_FINAL :
 #endif  // __GNUC__
 // Msg_Register_C2S
 
-// required bytes szName = 1;
-inline bool Msg_Register_C2S::_internal_has_szname() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+// string Name = 1;
+inline void Msg_Register_C2S::clear_name() {
+  name_.ClearToEmpty();
 }
-inline bool Msg_Register_C2S::has_szname() const {
-  return _internal_has_szname();
+inline const std::string& Msg_Register_C2S::name() const {
+  // @@protoc_insertion_point(field_get:Msg_Register_C2S.Name)
+  return _internal_name();
 }
-inline void Msg_Register_C2S::clear_szname() {
-  szname_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
+inline void Msg_Register_C2S::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Msg_Register_C2S.Name)
 }
-inline const std::string& Msg_Register_C2S::szname() const {
-  // @@protoc_insertion_point(field_get:Msg_Register_C2S.szName)
-  return _internal_szname();
+inline std::string* Msg_Register_C2S::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Msg_Register_C2S.Name)
+  return _internal_mutable_name();
 }
-inline void Msg_Register_C2S::set_szname(const std::string& value) {
-  _internal_set_szname(value);
-  // @@protoc_insertion_point(field_set:Msg_Register_C2S.szName)
+inline const std::string& Msg_Register_C2S::_internal_name() const {
+  return name_.Get();
 }
-inline std::string* Msg_Register_C2S::mutable_szname() {
-  // @@protoc_insertion_point(field_mutable:Msg_Register_C2S.szName)
-  return _internal_mutable_szname();
+inline void Msg_Register_C2S::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline const std::string& Msg_Register_C2S::_internal_szname() const {
-  return szname_.Get();
-}
-inline void Msg_Register_C2S::_internal_set_szname(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_Register_C2S::set_szname(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(
+inline void Msg_Register_C2S::set_name(std::string&& value) {
+  
+  name_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_Register_C2S.szName)
+  // @@protoc_insertion_point(field_set_rvalue:Msg_Register_C2S.Name)
 }
-inline void Msg_Register_C2S::set_szname(const char* value) {
+inline void Msg_Register_C2S::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_Register_C2S.szName)
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Msg_Register_C2S.Name)
 }
-inline void Msg_Register_C2S::set_szname(const void* value,
+inline void Msg_Register_C2S::set_name(const char* value,
     size_t size) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_Register_C2S.szName)
+  // @@protoc_insertion_point(field_set_pointer:Msg_Register_C2S.Name)
 }
-inline std::string* Msg_Register_C2S::_internal_mutable_szname() {
-  _has_bits_[0] |= 0x00000001u;
-  return szname_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+inline std::string* Msg_Register_C2S::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Msg_Register_C2S::release_szname() {
-  // @@protoc_insertion_point(field_release:Msg_Register_C2S.szName)
-  if (!_internal_has_szname()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return szname_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* Msg_Register_C2S::release_name() {
+  // @@protoc_insertion_point(field_release:Msg_Register_C2S.Name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Msg_Register_C2S::set_allocated_szname(std::string* szname) {
-  if (szname != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+inline void Msg_Register_C2S::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
-  szname_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szname,
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_Register_C2S.szName)
+  // @@protoc_insertion_point(field_set_allocated:Msg_Register_C2S.Name)
 }
 
-// required bytes szPassword = 2;
-inline bool Msg_Register_C2S::_internal_has_szpassword() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+// string Password = 2;
+inline void Msg_Register_C2S::clear_password() {
+  password_.ClearToEmpty();
 }
-inline bool Msg_Register_C2S::has_szpassword() const {
-  return _internal_has_szpassword();
+inline const std::string& Msg_Register_C2S::password() const {
+  // @@protoc_insertion_point(field_get:Msg_Register_C2S.Password)
+  return _internal_password();
 }
-inline void Msg_Register_C2S::clear_szpassword() {
-  szpassword_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
+inline void Msg_Register_C2S::set_password(const std::string& value) {
+  _internal_set_password(value);
+  // @@protoc_insertion_point(field_set:Msg_Register_C2S.Password)
 }
-inline const std::string& Msg_Register_C2S::szpassword() const {
-  // @@protoc_insertion_point(field_get:Msg_Register_C2S.szPassword)
-  return _internal_szpassword();
+inline std::string* Msg_Register_C2S::mutable_password() {
+  // @@protoc_insertion_point(field_mutable:Msg_Register_C2S.Password)
+  return _internal_mutable_password();
 }
-inline void Msg_Register_C2S::set_szpassword(const std::string& value) {
-  _internal_set_szpassword(value);
-  // @@protoc_insertion_point(field_set:Msg_Register_C2S.szPassword)
+inline const std::string& Msg_Register_C2S::_internal_password() const {
+  return password_.Get();
 }
-inline std::string* Msg_Register_C2S::mutable_szpassword() {
-  // @@protoc_insertion_point(field_mutable:Msg_Register_C2S.szPassword)
-  return _internal_mutable_szpassword();
+inline void Msg_Register_C2S::_internal_set_password(const std::string& value) {
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline const std::string& Msg_Register_C2S::_internal_szpassword() const {
-  return szpassword_.Get();
-}
-inline void Msg_Register_C2S::_internal_set_szpassword(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_Register_C2S::set_szpassword(std::string&& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(
+inline void Msg_Register_C2S::set_password(std::string&& value) {
+  
+  password_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_Register_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_rvalue:Msg_Register_C2S.Password)
 }
-inline void Msg_Register_C2S::set_szpassword(const char* value) {
+inline void Msg_Register_C2S::set_password(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_Register_C2S.szPassword)
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Msg_Register_C2S.Password)
 }
-inline void Msg_Register_C2S::set_szpassword(const void* value,
+inline void Msg_Register_C2S::set_password(const char* value,
     size_t size) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_Register_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_pointer:Msg_Register_C2S.Password)
 }
-inline std::string* Msg_Register_C2S::_internal_mutable_szpassword() {
-  _has_bits_[0] |= 0x00000002u;
-  return szpassword_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+inline std::string* Msg_Register_C2S::_internal_mutable_password() {
+  
+  return password_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Msg_Register_C2S::release_szpassword() {
-  // @@protoc_insertion_point(field_release:Msg_Register_C2S.szPassword)
-  if (!_internal_has_szpassword()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return szpassword_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* Msg_Register_C2S::release_password() {
+  // @@protoc_insertion_point(field_release:Msg_Register_C2S.Password)
+  return password_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Msg_Register_C2S::set_allocated_szpassword(std::string* szpassword) {
-  if (szpassword != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+inline void Msg_Register_C2S::set_allocated_password(std::string* password) {
+  if (password != nullptr) {
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
-  szpassword_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szpassword,
+  password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_Register_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_allocated:Msg_Register_C2S.Password)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Register_S2C
 
-// required int32 result = 1;
-inline bool Msg_Register_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Register_S2C::has_result() const {
-  return _internal_has_result();
-}
+// int32 result = 1;
 inline void Msg_Register_S2C::clear_result() {
   result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Register_S2C::_internal_result() const {
   return result_;
@@ -3428,7 +860,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Register_S2C::result() const {
   return _internal_result();
 }
 inline void Msg_Register_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   result_ = value;
 }
 inline void Msg_Register_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3440,167 +872,135 @@ inline void Msg_Register_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
 
 // Msg_Login_C2S
 
-// required bytes szName = 1;
-inline bool Msg_Login_C2S::_internal_has_szname() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
+// string Name = 1;
+inline void Msg_Login_C2S::clear_name() {
+  name_.ClearToEmpty();
 }
-inline bool Msg_Login_C2S::has_szname() const {
-  return _internal_has_szname();
+inline const std::string& Msg_Login_C2S::name() const {
+  // @@protoc_insertion_point(field_get:Msg_Login_C2S.Name)
+  return _internal_name();
 }
-inline void Msg_Login_C2S::clear_szname() {
-  szname_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
+inline void Msg_Login_C2S::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:Msg_Login_C2S.Name)
 }
-inline const std::string& Msg_Login_C2S::szname() const {
-  // @@protoc_insertion_point(field_get:Msg_Login_C2S.szName)
-  return _internal_szname();
+inline std::string* Msg_Login_C2S::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:Msg_Login_C2S.Name)
+  return _internal_mutable_name();
 }
-inline void Msg_Login_C2S::set_szname(const std::string& value) {
-  _internal_set_szname(value);
-  // @@protoc_insertion_point(field_set:Msg_Login_C2S.szName)
+inline const std::string& Msg_Login_C2S::_internal_name() const {
+  return name_.Get();
 }
-inline std::string* Msg_Login_C2S::mutable_szname() {
-  // @@protoc_insertion_point(field_mutable:Msg_Login_C2S.szName)
-  return _internal_mutable_szname();
+inline void Msg_Login_C2S::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline const std::string& Msg_Login_C2S::_internal_szname() const {
-  return szname_.Get();
-}
-inline void Msg_Login_C2S::_internal_set_szname(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_Login_C2S::set_szname(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(
+inline void Msg_Login_C2S::set_name(std::string&& value) {
+  
+  name_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_Login_C2S.szName)
+  // @@protoc_insertion_point(field_set_rvalue:Msg_Login_C2S.Name)
 }
-inline void Msg_Login_C2S::set_szname(const char* value) {
+inline void Msg_Login_C2S::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_Login_C2S.szName)
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Msg_Login_C2S.Name)
 }
-inline void Msg_Login_C2S::set_szname(const void* value,
+inline void Msg_Login_C2S::set_name(const char* value,
     size_t size) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_Login_C2S.szName)
+  // @@protoc_insertion_point(field_set_pointer:Msg_Login_C2S.Name)
 }
-inline std::string* Msg_Login_C2S::_internal_mutable_szname() {
-  _has_bits_[0] |= 0x00000001u;
-  return szname_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+inline std::string* Msg_Login_C2S::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Msg_Login_C2S::release_szname() {
-  // @@protoc_insertion_point(field_release:Msg_Login_C2S.szName)
-  if (!_internal_has_szname()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return szname_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* Msg_Login_C2S::release_name() {
+  // @@protoc_insertion_point(field_release:Msg_Login_C2S.Name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Msg_Login_C2S::set_allocated_szname(std::string* szname) {
-  if (szname != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+inline void Msg_Login_C2S::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
-  szname_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szname,
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_Login_C2S.szName)
+  // @@protoc_insertion_point(field_set_allocated:Msg_Login_C2S.Name)
 }
 
-// required bytes szPassword = 2;
-inline bool Msg_Login_C2S::_internal_has_szpassword() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
+// string Password = 2;
+inline void Msg_Login_C2S::clear_password() {
+  password_.ClearToEmpty();
 }
-inline bool Msg_Login_C2S::has_szpassword() const {
-  return _internal_has_szpassword();
+inline const std::string& Msg_Login_C2S::password() const {
+  // @@protoc_insertion_point(field_get:Msg_Login_C2S.Password)
+  return _internal_password();
 }
-inline void Msg_Login_C2S::clear_szpassword() {
-  szpassword_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
+inline void Msg_Login_C2S::set_password(const std::string& value) {
+  _internal_set_password(value);
+  // @@protoc_insertion_point(field_set:Msg_Login_C2S.Password)
 }
-inline const std::string& Msg_Login_C2S::szpassword() const {
-  // @@protoc_insertion_point(field_get:Msg_Login_C2S.szPassword)
-  return _internal_szpassword();
+inline std::string* Msg_Login_C2S::mutable_password() {
+  // @@protoc_insertion_point(field_mutable:Msg_Login_C2S.Password)
+  return _internal_mutable_password();
 }
-inline void Msg_Login_C2S::set_szpassword(const std::string& value) {
-  _internal_set_szpassword(value);
-  // @@protoc_insertion_point(field_set:Msg_Login_C2S.szPassword)
+inline const std::string& Msg_Login_C2S::_internal_password() const {
+  return password_.Get();
 }
-inline std::string* Msg_Login_C2S::mutable_szpassword() {
-  // @@protoc_insertion_point(field_mutable:Msg_Login_C2S.szPassword)
-  return _internal_mutable_szpassword();
+inline void Msg_Login_C2S::_internal_set_password(const std::string& value) {
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline const std::string& Msg_Login_C2S::_internal_szpassword() const {
-  return szpassword_.Get();
-}
-inline void Msg_Login_C2S::_internal_set_szpassword(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_Login_C2S::set_szpassword(std::string&& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(
+inline void Msg_Login_C2S::set_password(std::string&& value) {
+  
+  password_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_Login_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_rvalue:Msg_Login_C2S.Password)
 }
-inline void Msg_Login_C2S::set_szpassword(const char* value) {
+inline void Msg_Login_C2S::set_password(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_Login_C2S.szPassword)
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:Msg_Login_C2S.Password)
 }
-inline void Msg_Login_C2S::set_szpassword(const void* value,
+inline void Msg_Login_C2S::set_password(const char* value,
     size_t size) {
-  _has_bits_[0] |= 0x00000002u;
-  szpassword_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  
+  password_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_Login_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_pointer:Msg_Login_C2S.Password)
 }
-inline std::string* Msg_Login_C2S::_internal_mutable_szpassword() {
-  _has_bits_[0] |= 0x00000002u;
-  return szpassword_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+inline std::string* Msg_Login_C2S::_internal_mutable_password() {
+  
+  return password_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Msg_Login_C2S::release_szpassword() {
-  // @@protoc_insertion_point(field_release:Msg_Login_C2S.szPassword)
-  if (!_internal_has_szpassword()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return szpassword_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* Msg_Login_C2S::release_password() {
+  // @@protoc_insertion_point(field_release:Msg_Login_C2S.Password)
+  return password_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Msg_Login_C2S::set_allocated_szpassword(std::string* szpassword) {
-  if (szpassword != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
+inline void Msg_Login_C2S::set_allocated_password(std::string* password) {
+  if (password != nullptr) {
+    
   } else {
-    _has_bits_[0] &= ~0x00000002u;
+    
   }
-  szpassword_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szpassword,
+  password_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), password,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_Login_C2S.szPassword)
+  // @@protoc_insertion_point(field_set_allocated:Msg_Login_C2S.Password)
 }
 
 // -------------------------------------------------------------------
 
 // Msg_Login_S2C
 
-// required int32 result = 1;
-inline bool Msg_Login_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Login_S2C::has_result() const {
-  return _internal_has_result();
-}
+// int32 result = 1;
 inline void Msg_Login_S2C::clear_result() {
   result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::_internal_result() const {
   return result_;
@@ -3610,7 +1010,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::result() const {
   return _internal_result();
 }
 inline void Msg_Login_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   result_ = value;
 }
 inline void Msg_Login_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3618,17 +1018,9 @@ inline void Msg_Login_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:Msg_Login_S2C.result)
 }
 
-// required int32 id = 2;
-inline bool Msg_Login_S2C::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Login_S2C::has_id() const {
-  return _internal_has_id();
-}
+// int32 id = 2;
 inline void Msg_Login_S2C::clear_id() {
   id_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::_internal_id() const {
   return id_;
@@ -3638,7 +1030,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Login_S2C::id() const {
   return _internal_id();
 }
 inline void Msg_Login_S2C::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   id_ = value;
 }
 inline void Msg_Login_S2C::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -3646,1214 +1038,9 @@ inline void Msg_Login_S2C::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   // @@protoc_insertion_point(field_set:Msg_Login_S2C.id)
 }
 
-// -------------------------------------------------------------------
-
-// Msg_CreateRoom_C2S
-
-// required int32 id = 1;
-inline bool Msg_CreateRoom_C2S::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CreateRoom_C2S::has_id() const {
-  return _internal_has_id();
-}
-inline void Msg_CreateRoom_C2S::clear_id() {
-  id_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_CreateRoom_C2S::_internal_id() const {
-  return id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_CreateRoom_C2S::id() const {
-  // @@protoc_insertion_point(field_get:Msg_CreateRoom_C2S.id)
-  return _internal_id();
-}
-inline void Msg_CreateRoom_C2S::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  id_ = value;
-}
-inline void Msg_CreateRoom_C2S::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:Msg_CreateRoom_C2S.id)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_CreateRoom_S2C
-
-// required int32 result = 1;
-inline bool Msg_CreateRoom_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_CreateRoom_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_CreateRoom_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_CreateRoom_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_CreateRoom_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_CreateRoom_S2C.result)
-  return _internal_result();
-}
-inline void Msg_CreateRoom_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_CreateRoom_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_CreateRoom_S2C.result)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_EnterRoom_C2S
-
-// required int32 id = 1;
-inline bool Msg_EnterRoom_C2S::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_EnterRoom_C2S::has_id() const {
-  return _internal_has_id();
-}
-inline void Msg_EnterRoom_C2S::clear_id() {
-  id_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_C2S::_internal_id() const {
-  return id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_C2S::id() const {
-  // @@protoc_insertion_point(field_get:Msg_EnterRoom_C2S.id)
-  return _internal_id();
-}
-inline void Msg_EnterRoom_C2S::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  id_ = value;
-}
-inline void Msg_EnterRoom_C2S::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:Msg_EnterRoom_C2S.id)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_EnterRoom_S2C
-
-// required int32 result = 1;
-inline bool Msg_EnterRoom_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_EnterRoom_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_EnterRoom_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_EnterRoom_S2C.result)
-  return _internal_result();
-}
-inline void Msg_EnterRoom_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  result_ = value;
-}
-inline void Msg_EnterRoom_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_EnterRoom_S2C.result)
-}
-
-// optional int32 number = 2;
-inline bool Msg_EnterRoom_S2C::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_EnterRoom_S2C::has_number() const {
-  return _internal_has_number();
-}
-inline void Msg_EnterRoom_S2C::clear_number() {
-  number_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_S2C::_internal_number() const {
-  return number_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_EnterRoom_S2C::number() const {
-  // @@protoc_insertion_point(field_get:Msg_EnterRoom_S2C.number)
-  return _internal_number();
-}
-inline void Msg_EnterRoom_S2C::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  number_ = value;
-}
-inline void Msg_EnterRoom_S2C::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:Msg_EnterRoom_S2C.number)
-}
-
-// optional bytes szName = 3;
-inline bool Msg_EnterRoom_S2C::_internal_has_szname() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_EnterRoom_S2C::has_szname() const {
-  return _internal_has_szname();
-}
-inline void Msg_EnterRoom_S2C::clear_szname() {
-  szname_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& Msg_EnterRoom_S2C::szname() const {
-  // @@protoc_insertion_point(field_get:Msg_EnterRoom_S2C.szName)
-  return _internal_szname();
-}
-inline void Msg_EnterRoom_S2C::set_szname(const std::string& value) {
-  _internal_set_szname(value);
-  // @@protoc_insertion_point(field_set:Msg_EnterRoom_S2C.szName)
-}
-inline std::string* Msg_EnterRoom_S2C::mutable_szname() {
-  // @@protoc_insertion_point(field_mutable:Msg_EnterRoom_S2C.szName)
-  return _internal_mutable_szname();
-}
-inline const std::string& Msg_EnterRoom_S2C::_internal_szname() const {
-  return szname_.Get();
-}
-inline void Msg_EnterRoom_S2C::_internal_set_szname(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_EnterRoom_S2C::set_szname(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_EnterRoom_S2C.szName)
-}
-inline void Msg_EnterRoom_S2C::set_szname(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_EnterRoom_S2C.szName)
-}
-inline void Msg_EnterRoom_S2C::set_szname(const void* value,
-    size_t size) {
-  _has_bits_[0] |= 0x00000001u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_EnterRoom_S2C.szName)
-}
-inline std::string* Msg_EnterRoom_S2C::_internal_mutable_szname() {
-  _has_bits_[0] |= 0x00000001u;
-  return szname_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Msg_EnterRoom_S2C::release_szname() {
-  // @@protoc_insertion_point(field_release:Msg_EnterRoom_S2C.szName)
-  if (!_internal_has_szname()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return szname_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Msg_EnterRoom_S2C::set_allocated_szname(std::string* szname) {
-  if (szname != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  szname_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szname,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_EnterRoom_S2C.szName)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_ChangeState_C2S
-
-// required int32 result = 1;
-inline bool Msg_ChangeState_C2S::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_C2S::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_ChangeState_C2S::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::result() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_C2S.result)
-  return _internal_result();
-}
-inline void Msg_ChangeState_C2S::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_ChangeState_C2S::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_C2S.result)
-}
-
-// optional int32 number1 = 2;
-inline bool Msg_ChangeState_C2S::_internal_has_number1() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_C2S::has_number1() const {
-  return _internal_has_number1();
-}
-inline void Msg_ChangeState_C2S::clear_number1() {
-  number1_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::_internal_number1() const {
-  return number1_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::number1() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_C2S.number1)
-  return _internal_number1();
-}
-inline void Msg_ChangeState_C2S::_internal_set_number1(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  number1_ = value;
-}
-inline void Msg_ChangeState_C2S::set_number1(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number1(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_C2S.number1)
-}
-
-// optional int32 number2 = 3;
-inline bool Msg_ChangeState_C2S::_internal_has_number2() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_C2S::has_number2() const {
-  return _internal_has_number2();
-}
-inline void Msg_ChangeState_C2S::clear_number2() {
-  number2_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::_internal_number2() const {
-  return number2_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::number2() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_C2S.number2)
-  return _internal_number2();
-}
-inline void Msg_ChangeState_C2S::_internal_set_number2(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  number2_ = value;
-}
-inline void Msg_ChangeState_C2S::set_number2(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number2(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_C2S.number2)
-}
-
-// optional int32 type = 4;
-inline bool Msg_ChangeState_C2S::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_C2S::has_type() const {
-  return _internal_has_type();
-}
-inline void Msg_ChangeState_C2S::clear_type() {
-  type_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::_internal_type() const {
-  return type_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::type() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_C2S.type)
-  return _internal_type();
-}
-inline void Msg_ChangeState_C2S::_internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000008u;
-  type_ = value;
-}
-inline void Msg_ChangeState_C2S::set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_C2S.type)
-}
-
-// optional int32 ready = 5;
-inline bool Msg_ChangeState_C2S::_internal_has_ready() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_C2S::has_ready() const {
-  return _internal_has_ready();
-}
-inline void Msg_ChangeState_C2S::clear_ready() {
-  ready_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::_internal_ready() const {
-  return ready_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_C2S::ready() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_C2S.ready)
-  return _internal_ready();
-}
-inline void Msg_ChangeState_C2S::_internal_set_ready(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000010u;
-  ready_ = value;
-}
-inline void Msg_ChangeState_C2S::set_ready(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_ready(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_C2S.ready)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_ChangeState_S2C
-
-// required int32 result = 1;
-inline bool Msg_ChangeState_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_ChangeState_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_S2C.result)
-  return _internal_result();
-}
-inline void Msg_ChangeState_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_ChangeState_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_S2C.result)
-}
-
-// optional int32 number1 = 2;
-inline bool Msg_ChangeState_S2C::_internal_has_number1() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_S2C::has_number1() const {
-  return _internal_has_number1();
-}
-inline void Msg_ChangeState_S2C::clear_number1() {
-  number1_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::_internal_number1() const {
-  return number1_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::number1() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_S2C.number1)
-  return _internal_number1();
-}
-inline void Msg_ChangeState_S2C::_internal_set_number1(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  number1_ = value;
-}
-inline void Msg_ChangeState_S2C::set_number1(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number1(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_S2C.number1)
-}
-
-// optional int32 number2 = 3;
-inline bool Msg_ChangeState_S2C::_internal_has_number2() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_S2C::has_number2() const {
-  return _internal_has_number2();
-}
-inline void Msg_ChangeState_S2C::clear_number2() {
-  number2_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::_internal_number2() const {
-  return number2_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::number2() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_S2C.number2)
-  return _internal_number2();
-}
-inline void Msg_ChangeState_S2C::_internal_set_number2(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  number2_ = value;
-}
-inline void Msg_ChangeState_S2C::set_number2(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number2(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_S2C.number2)
-}
-
-// optional int32 type = 4;
-inline bool Msg_ChangeState_S2C::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000008u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_S2C::has_type() const {
-  return _internal_has_type();
-}
-inline void Msg_ChangeState_S2C::clear_type() {
-  type_ = 0;
-  _has_bits_[0] &= ~0x00000008u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::_internal_type() const {
-  return type_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::type() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_S2C.type)
-  return _internal_type();
-}
-inline void Msg_ChangeState_S2C::_internal_set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000008u;
-  type_ = value;
-}
-inline void Msg_ChangeState_S2C::set_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_S2C.type)
-}
-
-// optional int32 ready = 5;
-inline bool Msg_ChangeState_S2C::_internal_has_ready() const {
-  bool value = (_has_bits_[0] & 0x00000010u) != 0;
-  return value;
-}
-inline bool Msg_ChangeState_S2C::has_ready() const {
-  return _internal_has_ready();
-}
-inline void Msg_ChangeState_S2C::clear_ready() {
-  ready_ = 0;
-  _has_bits_[0] &= ~0x00000010u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::_internal_ready() const {
-  return ready_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ChangeState_S2C::ready() const {
-  // @@protoc_insertion_point(field_get:Msg_ChangeState_S2C.ready)
-  return _internal_ready();
-}
-inline void Msg_ChangeState_S2C::_internal_set_ready(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000010u;
-  ready_ = value;
-}
-inline void Msg_ChangeState_S2C::set_ready(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_ready(value);
-  // @@protoc_insertion_point(field_set:Msg_ChangeState_S2C.ready)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_Expel_C2S
-
-// required int32 number = 1;
-inline bool Msg_Expel_C2S::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Expel_C2S::has_number() const {
-  return _internal_has_number();
-}
-inline void Msg_Expel_C2S::clear_number() {
-  number_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_C2S::_internal_number() const {
-  return number_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_C2S::number() const {
-  // @@protoc_insertion_point(field_get:Msg_Expel_C2S.number)
-  return _internal_number();
-}
-inline void Msg_Expel_C2S::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  number_ = value;
-}
-inline void Msg_Expel_C2S::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:Msg_Expel_C2S.number)
-}
-
-// required int32 id = 2;
-inline bool Msg_Expel_C2S::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Expel_C2S::has_id() const {
-  return _internal_has_id();
-}
-inline void Msg_Expel_C2S::clear_id() {
-  id_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_C2S::_internal_id() const {
-  return id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_C2S::id() const {
-  // @@protoc_insertion_point(field_get:Msg_Expel_C2S.id)
-  return _internal_id();
-}
-inline void Msg_Expel_C2S::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  id_ = value;
-}
-inline void Msg_Expel_C2S::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:Msg_Expel_C2S.id)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_Expel_S2C
-
-// required int32 result = 1;
-inline bool Msg_Expel_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_Expel_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_Expel_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_Expel_S2C.result)
-  return _internal_result();
-}
-inline void Msg_Expel_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_Expel_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_Expel_S2C.result)
-}
-
-// optional int32 number = 2;
-inline bool Msg_Expel_S2C::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_Expel_S2C::has_number() const {
-  return _internal_has_number();
-}
-inline void Msg_Expel_S2C::clear_number() {
-  number_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_S2C::_internal_number() const {
-  return number_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_Expel_S2C::number() const {
-  // @@protoc_insertion_point(field_get:Msg_Expel_S2C.number)
-  return _internal_number();
-}
-inline void Msg_Expel_S2C::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  number_ = value;
-}
-inline void Msg_Expel_S2C::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:Msg_Expel_S2C.number)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_StartGame_C2S
-
-// required int32 id = 1;
-inline bool Msg_StartGame_C2S::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StartGame_C2S::has_id() const {
-  return _internal_has_id();
-}
-inline void Msg_StartGame_C2S::clear_id() {
-  id_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_StartGame_C2S::_internal_id() const {
-  return id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_StartGame_C2S::id() const {
-  // @@protoc_insertion_point(field_get:Msg_StartGame_C2S.id)
-  return _internal_id();
-}
-inline void Msg_StartGame_C2S::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  id_ = value;
-}
-inline void Msg_StartGame_C2S::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:Msg_StartGame_C2S.id)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_StartGame_S2C
-
-// required int32 result = 1;
-inline bool Msg_StartGame_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_StartGame_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_StartGame_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_StartGame_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_StartGame_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_StartGame_S2C.result)
-  return _internal_result();
-}
-inline void Msg_StartGame_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_StartGame_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_StartGame_S2C.result)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_ExitRoom_C2S
-
-// required int32 id = 1;
-inline bool Msg_ExitRoom_C2S::_internal_has_id() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ExitRoom_C2S::has_id() const {
-  return _internal_has_id();
-}
-inline void Msg_ExitRoom_C2S::clear_id() {
-  id_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_C2S::_internal_id() const {
-  return id_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_C2S::id() const {
-  // @@protoc_insertion_point(field_get:Msg_ExitRoom_C2S.id)
-  return _internal_id();
-}
-inline void Msg_ExitRoom_C2S::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  id_ = value;
-}
-inline void Msg_ExitRoom_C2S::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:Msg_ExitRoom_C2S.id)
-}
-
-// required int32 number = 2;
-inline bool Msg_ExitRoom_C2S::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ExitRoom_C2S::has_number() const {
-  return _internal_has_number();
-}
-inline void Msg_ExitRoom_C2S::clear_number() {
-  number_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_C2S::_internal_number() const {
-  return number_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_C2S::number() const {
-  // @@protoc_insertion_point(field_get:Msg_ExitRoom_C2S.number)
-  return _internal_number();
-}
-inline void Msg_ExitRoom_C2S::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  number_ = value;
-}
-inline void Msg_ExitRoom_C2S::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:Msg_ExitRoom_C2S.number)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_ExitRoom_S2C
-
-// required int32 result = 1;
-inline bool Msg_ExitRoom_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_ExitRoom_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_ExitRoom_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_ExitRoom_S2C.result)
-  return _internal_result();
-}
-inline void Msg_ExitRoom_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000001u;
-  result_ = value;
-}
-inline void Msg_ExitRoom_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_ExitRoom_S2C.result)
-}
-
-// optional int32 number = 2;
-inline bool Msg_ExitRoom_S2C::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_ExitRoom_S2C::has_number() const {
-  return _internal_has_number();
-}
-inline void Msg_ExitRoom_S2C::clear_number() {
-  number_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_S2C::_internal_number() const {
-  return number_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_ExitRoom_S2C::number() const {
-  // @@protoc_insertion_point(field_get:Msg_ExitRoom_S2C.number)
-  return _internal_number();
-}
-inline void Msg_ExitRoom_S2C::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
-  number_ = value;
-}
-inline void Msg_ExitRoom_S2C::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:Msg_ExitRoom_S2C.number)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_FANGJIANLT_C2S
-
-// required bytes szContent = 1;
-inline bool Msg_FANGJIANLT_C2S::_internal_has_szcontent() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_C2S::has_szcontent() const {
-  return _internal_has_szcontent();
-}
-inline void Msg_FANGJIANLT_C2S::clear_szcontent() {
-  szcontent_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& Msg_FANGJIANLT_C2S::szcontent() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_C2S.szContent)
-  return _internal_szcontent();
-}
-inline void Msg_FANGJIANLT_C2S::set_szcontent(const std::string& value) {
-  _internal_set_szcontent(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_C2S.szContent)
-}
-inline std::string* Msg_FANGJIANLT_C2S::mutable_szcontent() {
-  // @@protoc_insertion_point(field_mutable:Msg_FANGJIANLT_C2S.szContent)
-  return _internal_mutable_szcontent();
-}
-inline const std::string& Msg_FANGJIANLT_C2S::_internal_szcontent() const {
-  return szcontent_.Get();
-}
-inline void Msg_FANGJIANLT_C2S::_internal_set_szcontent(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_FANGJIANLT_C2S::set_szcontent(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_FANGJIANLT_C2S.szContent)
-}
-inline void Msg_FANGJIANLT_C2S::set_szcontent(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_FANGJIANLT_C2S.szContent)
-}
-inline void Msg_FANGJIANLT_C2S::set_szcontent(const void* value,
-    size_t size) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_FANGJIANLT_C2S.szContent)
-}
-inline std::string* Msg_FANGJIANLT_C2S::_internal_mutable_szcontent() {
-  _has_bits_[0] |= 0x00000001u;
-  return szcontent_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Msg_FANGJIANLT_C2S::release_szcontent() {
-  // @@protoc_insertion_point(field_release:Msg_FANGJIANLT_C2S.szContent)
-  if (!_internal_has_szcontent()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return szcontent_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Msg_FANGJIANLT_C2S::set_allocated_szcontent(std::string* szcontent) {
-  if (szcontent != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  szcontent_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szcontent,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_FANGJIANLT_C2S.szContent)
-}
-
-// required bytes szName = 2;
-inline bool Msg_FANGJIANLT_C2S::_internal_has_szname() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_C2S::has_szname() const {
-  return _internal_has_szname();
-}
-inline void Msg_FANGJIANLT_C2S::clear_szname() {
-  szname_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& Msg_FANGJIANLT_C2S::szname() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_C2S.szName)
-  return _internal_szname();
-}
-inline void Msg_FANGJIANLT_C2S::set_szname(const std::string& value) {
-  _internal_set_szname(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_C2S.szName)
-}
-inline std::string* Msg_FANGJIANLT_C2S::mutable_szname() {
-  // @@protoc_insertion_point(field_mutable:Msg_FANGJIANLT_C2S.szName)
-  return _internal_mutable_szname();
-}
-inline const std::string& Msg_FANGJIANLT_C2S::_internal_szname() const {
-  return szname_.Get();
-}
-inline void Msg_FANGJIANLT_C2S::_internal_set_szname(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_FANGJIANLT_C2S::set_szname(std::string&& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_FANGJIANLT_C2S.szName)
-}
-inline void Msg_FANGJIANLT_C2S::set_szname(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_FANGJIANLT_C2S.szName)
-}
-inline void Msg_FANGJIANLT_C2S::set_szname(const void* value,
-    size_t size) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_FANGJIANLT_C2S.szName)
-}
-inline std::string* Msg_FANGJIANLT_C2S::_internal_mutable_szname() {
-  _has_bits_[0] |= 0x00000002u;
-  return szname_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Msg_FANGJIANLT_C2S::release_szname() {
-  // @@protoc_insertion_point(field_release:Msg_FANGJIANLT_C2S.szName)
-  if (!_internal_has_szname()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return szname_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Msg_FANGJIANLT_C2S::set_allocated_szname(std::string* szname) {
-  if (szname != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
-  } else {
-    _has_bits_[0] &= ~0x00000002u;
-  }
-  szname_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szname,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_FANGJIANLT_C2S.szName)
-}
-
-// required int32 houseid = 3;
-inline bool Msg_FANGJIANLT_C2S::_internal_has_houseid() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_C2S::has_houseid() const {
-  return _internal_has_houseid();
-}
-inline void Msg_FANGJIANLT_C2S::clear_houseid() {
-  houseid_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_FANGJIANLT_C2S::_internal_houseid() const {
-  return houseid_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_FANGJIANLT_C2S::houseid() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_C2S.houseid)
-  return _internal_houseid();
-}
-inline void Msg_FANGJIANLT_C2S::_internal_set_houseid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  houseid_ = value;
-}
-inline void Msg_FANGJIANLT_C2S::set_houseid(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_houseid(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_C2S.houseid)
-}
-
-// -------------------------------------------------------------------
-
-// Msg_FANGJIANLT_S2C
-
-// required int32 result = 1;
-inline bool Msg_FANGJIANLT_S2C::_internal_has_result() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_S2C::has_result() const {
-  return _internal_has_result();
-}
-inline void Msg_FANGJIANLT_S2C::clear_result() {
-  result_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_FANGJIANLT_S2C::_internal_result() const {
-  return result_;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Msg_FANGJIANLT_S2C::result() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_S2C.result)
-  return _internal_result();
-}
-inline void Msg_FANGJIANLT_S2C::_internal_set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  result_ = value;
-}
-inline void Msg_FANGJIANLT_S2C::set_result(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _internal_set_result(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_S2C.result)
-}
-
-// optional bytes szContent = 2;
-inline bool Msg_FANGJIANLT_S2C::_internal_has_szcontent() const {
-  bool value = (_has_bits_[0] & 0x00000001u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_S2C::has_szcontent() const {
-  return _internal_has_szcontent();
-}
-inline void Msg_FANGJIANLT_S2C::clear_szcontent() {
-  szcontent_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000001u;
-}
-inline const std::string& Msg_FANGJIANLT_S2C::szcontent() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_S2C.szContent)
-  return _internal_szcontent();
-}
-inline void Msg_FANGJIANLT_S2C::set_szcontent(const std::string& value) {
-  _internal_set_szcontent(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_S2C.szContent)
-}
-inline std::string* Msg_FANGJIANLT_S2C::mutable_szcontent() {
-  // @@protoc_insertion_point(field_mutable:Msg_FANGJIANLT_S2C.szContent)
-  return _internal_mutable_szcontent();
-}
-inline const std::string& Msg_FANGJIANLT_S2C::_internal_szcontent() const {
-  return szcontent_.Get();
-}
-inline void Msg_FANGJIANLT_S2C::_internal_set_szcontent(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_FANGJIANLT_S2C::set_szcontent(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_FANGJIANLT_S2C.szContent)
-}
-inline void Msg_FANGJIANLT_S2C::set_szcontent(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_FANGJIANLT_S2C.szContent)
-}
-inline void Msg_FANGJIANLT_S2C::set_szcontent(const void* value,
-    size_t size) {
-  _has_bits_[0] |= 0x00000001u;
-  szcontent_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_FANGJIANLT_S2C.szContent)
-}
-inline std::string* Msg_FANGJIANLT_S2C::_internal_mutable_szcontent() {
-  _has_bits_[0] |= 0x00000001u;
-  return szcontent_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Msg_FANGJIANLT_S2C::release_szcontent() {
-  // @@protoc_insertion_point(field_release:Msg_FANGJIANLT_S2C.szContent)
-  if (!_internal_has_szcontent()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return szcontent_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Msg_FANGJIANLT_S2C::set_allocated_szcontent(std::string* szcontent) {
-  if (szcontent != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
-  } else {
-    _has_bits_[0] &= ~0x00000001u;
-  }
-  szcontent_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szcontent,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_FANGJIANLT_S2C.szContent)
-}
-
-// optional bytes szName = 3;
-inline bool Msg_FANGJIANLT_S2C::_internal_has_szname() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
-  return value;
-}
-inline bool Msg_FANGJIANLT_S2C::has_szname() const {
-  return _internal_has_szname();
-}
-inline void Msg_FANGJIANLT_S2C::clear_szname() {
-  szname_.ClearToEmpty();
-  _has_bits_[0] &= ~0x00000002u;
-}
-inline const std::string& Msg_FANGJIANLT_S2C::szname() const {
-  // @@protoc_insertion_point(field_get:Msg_FANGJIANLT_S2C.szName)
-  return _internal_szname();
-}
-inline void Msg_FANGJIANLT_S2C::set_szname(const std::string& value) {
-  _internal_set_szname(value);
-  // @@protoc_insertion_point(field_set:Msg_FANGJIANLT_S2C.szName)
-}
-inline std::string* Msg_FANGJIANLT_S2C::mutable_szname() {
-  // @@protoc_insertion_point(field_mutable:Msg_FANGJIANLT_S2C.szName)
-  return _internal_mutable_szname();
-}
-inline const std::string& Msg_FANGJIANLT_S2C::_internal_szname() const {
-  return szname_.Get();
-}
-inline void Msg_FANGJIANLT_S2C::_internal_set_szname(const std::string& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Msg_FANGJIANLT_S2C::set_szname(std::string&& value) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:Msg_FANGJIANLT_S2C.szName)
-}
-inline void Msg_FANGJIANLT_S2C::set_szname(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:Msg_FANGJIANLT_S2C.szName)
-}
-inline void Msg_FANGJIANLT_S2C::set_szname(const void* value,
-    size_t size) {
-  _has_bits_[0] |= 0x00000002u;
-  szname_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:Msg_FANGJIANLT_S2C.szName)
-}
-inline std::string* Msg_FANGJIANLT_S2C::_internal_mutable_szname() {
-  _has_bits_[0] |= 0x00000002u;
-  return szname_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Msg_FANGJIANLT_S2C::release_szname() {
-  // @@protoc_insertion_point(field_release:Msg_FANGJIANLT_S2C.szName)
-  if (!_internal_has_szname()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000002u;
-  return szname_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Msg_FANGJIANLT_S2C::set_allocated_szname(std::string* szname) {
-  if (szname != nullptr) {
-    _has_bits_[0] |= 0x00000002u;
-  } else {
-    _has_bits_[0] &= ~0x00000002u;
-  }
-  szname_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), szname,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:Msg_FANGJIANLT_S2C.szName)
-}
-
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -12,7 +12,7 @@ include_directories(${CMAKE_SOURCE_DIR}/Include)
 set(plug_incl "${CMAKE_SOURCE_DIR}/Common/")
 
 # 插件通用链接库
-set(plug_lklibs pthread dl Logger)
+set(plug_lklibs pthread dl Logger NetMsgDefine)
 
 # 所有插件目录
 file(GLOB plug_dirs ${CMAKE_SOURCE_DIR}/Plugins/*)

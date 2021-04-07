@@ -12,7 +12,7 @@ extern "C" void DllStartPlugin(IPluginManager* pm)
 {
     g_pUserLogin = new UserPlugin(pm);
     pm->Registered(g_pUserLogin);
-};
+}
 
 extern "C" void DllStopPlugin(IPluginManager* pm)
 {

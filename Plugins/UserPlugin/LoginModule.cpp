@@ -3,8 +3,8 @@
 //
 
 #include "pch.h"
-#include <NetMsgDefine/Msg.pb.h>
 #include "LoginModule.h"
+#include <NetMsgDefine/Msg.pb.h>
 
 LoginModule::LoginModule(IPluginManager *pluginManager) {
     m_pluginManager = pluginManager;
@@ -49,17 +49,20 @@ bool LoginModule::Shut() {
 }
 
 void LoginModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, const char *msg, const uint32_t nLen) {
+//    std::string tmpMsg (msg);
+//    Msg_Login_C2S * xMsg;
+//    xMsg->ParseFromString(tmpMsg);
     Msg_Login_C2S xMsg;
-    xMsg.ParseFromArray(msg + 4, nLen);
-
+    xMsg.ParseFromString(msg);
+#if false
     if (nMsgID == MsgType::LOGIN_C2S) {
-        auto *pMsg = (Msg_Login_C2S*)msg;
-
+//        MODULE_TRACE("name: {}, password: {}", xMsg.name(), xMsg.password());
         int userId = m_nMaxUserID;
         IQueryResult *result;
         m_pSQLService->ExecuteQueryf(&result,
                                      "SELECT userId FROM User WHERE userName='%s'",
-                                     pMsg->szname().c_str());
+                                     xMsg.name().c_str());
+
         if(result && result->Read()){
             userId = result->get_int32(0);
         }
@@ -67,13 +70,18 @@ void LoginModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, 
             userId = ++m_nMaxUserID;
             m_pSQLService->ExecuteQueryf(&result,
                                          "INSERT INTO User(userID, userName) VALUES(%d, '%s);",
-                                         userId, pMsg->szname().c_str());
+                                         userId, xMsg.name().c_str());
         }
-        MODULE_INFO("UserLogin: {} : {}", pMsg->szname().c_str(), userId);
-        Msg_Login_S2C login;
-        login.set_id(userId);
-        m_pNetServer->SendMsg(nClientID, &login);
+        MODULE_INFO("UserLogin: {} : {}", xMsg.name().c_str(), userId);
+        Msg_Login_S2C *login;
+        login->set_id(userId);
+        m_pNetServer->SendMsg(nClientID, login);
     }
+#else
+    if(xMsg.name() == "admin" && xMsg.password() == "adminadmin") {
+        m_pNetServer->SendMsg(nClientID, (void*)"ok###");
+    }
+#endif
 }
 
 void LoginModule::OnClientConnected(uint64_t nClientID) {

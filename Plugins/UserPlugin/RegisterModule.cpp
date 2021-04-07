@@ -41,7 +41,7 @@ RegisterModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, co
         IQueryResult *result;
         m_pSQLService->ExecuteQueryf(&result,
                                      "SELECT userId FROM User WHERE userName='%s'",
-                                     pMsg->szname().c_str());
+                                     pMsg->name().c_str());
         if(result && result->Read()){
             userId = result->get_int32(0);
         }
@@ -49,9 +49,9 @@ RegisterModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, co
             userId = ++m_nMaxUserID;
             m_pSQLService->ExecuteQueryf(&result,
                                          "INSERT INTO User(userID, userName) VALUES(%d, '%s);",
-                                         userId, pMsg->szname().c_str());
+                                         userId, pMsg->name().c_str());
         }
-        MODULE_INFO("UserLogin: {} : {}", pMsg->szname().c_str(), userId);
+        MODULE_INFO("UserLogin: {} : {}", pMsg->name().c_str(), userId);
         Msg_Login_S2C login;
         login.set_id(userId);
         m_pNetServer->SendMsg(nClientID, &login);
