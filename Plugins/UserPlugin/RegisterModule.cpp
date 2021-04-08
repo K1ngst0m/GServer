@@ -16,6 +16,24 @@ bool RegisterModule::Init() {
     MODULE_INFO("RegisterModule: Init");
     m_pNetServer = m_pluginManager->FindModule<INetServer>();
     m_pSQLService = m_pluginManager->FindModule<ISQLService>();
+
+//    MODULE_INFO("RegisterModule: Open DataBase");
+//    m_pSQLService->Open("filename=Resources/Data/data.sqlite");
+//
+//    m_nMaxUserID = 0;
+//    IQueryResult *result;
+//    auto cmd = "SELECT max(USER.userID) FROM User";
+//    m_pSQLService->ExecuteQuery(&result, cmd);
+//    if(result && result->Read()){
+//        m_nMaxUserID = result->get_int32(0);
+//    }
+//
+//    MODULE_INFO("RegisterModule: Init Server");
+//
+//    m_pNetServer->Initialization(3001, "47.110.143.150");
+    m_pNetServer->AddEventCallBack(this, &RegisterModule::OnClientConnected, &RegisterModule::OnClientLeave);
+    m_pNetServer->AddReceiveCallBack((uint32_t)MsgType::REGISTER_C2S, this, &RegisterModule::OnMsgReceive);
+
     return true;
 }
 
@@ -31,30 +49,39 @@ bool RegisterModule::Shut() {
 
 void
 RegisterModule::OnMsgReceive(const uint64_t nClientID, const uint32_t nMsgID, const char *msg, const uint32_t nLen) {
-    Msg_Login_C2S xMsg;
-    xMsg.ParseFromArray(msg + 4, nLen);
-
-    if (nMsgID == MsgType::LOGIN_C2S) {
-        auto *pMsg = (Msg_Login_C2S*)msg;
-
-        int userId = m_nMaxUserID;
+    Msg_Register_C2S xMsg;
+    xMsg.ParseFromString(msg);
+    if (nMsgID == MsgType::REGISTER_C2S) {
         IQueryResult *result;
         m_pSQLService->ExecuteQueryf(&result,
                                      "SELECT userId FROM User WHERE userName='%s'",
-                                     pMsg->name().c_str());
-        if(result && result->Read()){
-            userId = result->get_int32(0);
+                                     xMsg.name().c_str());
+
+        Msg_Register_S2C regMsg;
+        regMsg.set_result(-1);
+
+        // 1: 成功, 0: 失败, -1: 其他错误
+        if(result){
+            if(result->Read()){
+                regMsg.set_result(0);
+                MODULE_INFO("User {} register failed, account already exists.", xMsg.name().c_str());
+            }
+            else{
+                regMsg.set_result(1);
+                m_pSQLService->ExecuteQueryf(&result,
+                                             "INSERT INTO User(userId, userName) VALUES(%d, '%s');",
+                                             xMsg.name().c_str(), xMsg.password().c_str());
+                if(!result) regMsg.set_result(-1);
+                MODULE_INFO("User {} register success.", xMsg.name().c_str());
+            }
         }
         else{
-            userId = ++m_nMaxUserID;
-            m_pSQLService->ExecuteQueryf(&result,
-                                         "INSERT INTO User(userID, userName) VALUES(%d, '%s);",
-                                         userId, pMsg->name().c_str());
+            regMsg.set_result(-1);
+            MODULE_INFO("User {} register failed, other error", xMsg.name().c_str());
         }
-        MODULE_INFO("UserLogin: {} : {}", pMsg->name().c_str(), userId);
-        Msg_Login_S2C login;
-        login.set_id(userId);
-        m_pNetServer->SendMsg(nClientID, &login);
+
+        auto resultData = fmt::format("{}#", regMsg.result());
+        m_pNetServer->SendMsg(nClientID, (void*)resultData.c_str());
     }
 }
 

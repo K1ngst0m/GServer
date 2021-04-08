@@ -78,7 +78,7 @@ bool NetServer::Update() {
                 size_t nIndex = 0;
                 uint16_t nSize = *(uint16_t *) pData;
                 uint16_t nType = *(uint16_t *) (pData + sizeof(uint16_t));
-                nType = 1020;
+//                nType = 1020;
                 MODULE_INFO("message ID: {}", nType);
 
                 while ((kv.second->m_recvData.length() - nIndex) >= nSize) {
@@ -87,9 +87,6 @@ bool NetServer::Update() {
 
                     if (itr != m_onReceiveCB.end()) {
 
-//                        for(auto idx = 4; idx < len; idx++){
-//                            pData[idx - 4] = kv.second->m_recvData[idx];
-//                        }
                         for (const auto &onReceive : itr->second) {
                             (*onReceive)
                             (kv.second->m_guid, nType, kv.second->m_recvData.data() + 4, nSize);
@@ -165,8 +162,9 @@ bool NetServer::AddEventCallBack(const NET_EVENT_FUNCTOR_PTR &enter_cb, const NE
 void NetServer::SendMsg(const uint64_t nClientID, void *msg) {
     auto itr = m_mapUser.find(nClientID);
     if (itr != m_mapUser.end()) {
-        const char *pData = (const char *) msg;
-        itr->second->m_sendData.append(pData, *(uint16_t *) (pData));
+        std::string pData = (const char *) msg;
+        itr->second->m_sendData.clear();
+        itr->second->m_sendData.append(pData);
     }
 }
 

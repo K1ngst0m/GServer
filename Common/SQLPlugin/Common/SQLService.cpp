@@ -36,7 +36,6 @@ bool SQLService::Shut() {
 
 int SQLService::Open(const char *constr) {
     // 拷贝字符串
-#if true
     char *p = strdup(constr);
 
     char *tmp = p;
@@ -64,10 +63,6 @@ int SQLService::Open(const char *constr) {
     t1.detach();
 
     return OpenImpl(strMap);
-#else
-    std::string p(conststr);
-    std::map<std::string, std::string> strMap;
-#endif
 }
 
 int SQLService::ExecuteQueryf(IQueryResult **result, const char *cmd, ...) {
